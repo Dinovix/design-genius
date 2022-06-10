@@ -7,10 +7,20 @@
         <title inertia>{{ config('app.name', 'Design Genius') }}</title>
 
         <!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+		<style>
+			* {
+				/* font-family: 'Kdam Thmor Pro', sans-serif ; */
+			}
+		</style>
 
         <!-- Scripts -->
         @routes
@@ -23,5 +33,6 @@
         @env ('local')
             <script src="http://localhost:3000/browser-sync/browser-sync-client.js"></script>
         @endenv
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </body>
 </html>

@@ -12,7 +12,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Stick No Bills', ...defaultTheme.fontFamily.sans],
+				serif: ['Stick', ...defaultTheme.fontFamily.sans],
             }
         },
     },

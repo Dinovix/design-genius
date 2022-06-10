@@ -1,5 +1,5 @@
 <template>
 
-	<img src="/img/logo-min.png" alt="Design Genius logo">
+	<img src="/img/logo-min.png" width="50" alt="Design Genius logo">
 
 </template>

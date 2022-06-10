@@ -7,6 +7,7 @@ import JetBanner from '@/Jetstream/Banner.vue';
 import JetDropdown from '@/Jetstream/Dropdown.vue';
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue';
 import JetNavLink from '@/Jetstream/NavLink.vue';
+import JetSideMenu from '@/Jetstream/SideMenu.vue';
 import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue';
 
 defineProps({
@@ -33,6 +34,7 @@ const logout = () => {
         <Head :title="title" />
 
         <JetBanner />
+
 
         <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">
@@ -207,7 +209,7 @@ const logout = () => {
 
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
+                    <div class="py-1 space-y-1">
                         <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </JetResponsiveNavLink>
@@ -217,12 +219,12 @@ const logout = () => {
                     <div class="pt-4 pb-1 border-t border-gray-200">
                         <div class="flex items-center px-4">
                             <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-3">
-                                <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">
+                                <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.first_name">
                             </div>
 
                             <div>
                                 <div class="font-medium text-base text-gray-800">
-                                    {{ $page.props.user.name }}
+                                    {{ $page.props.user.first_name }}
                                 </div>
                                 <div class="font-medium text-sm text-gray-500">
                                     {{ $page.props.user.email }}
@@ -303,8 +305,11 @@ const logout = () => {
             </header>
 
             <!-- Page Content -->
-            <main>
-                <slot />
+            <main class="flex flex-column  min-w-full ">
+				     <JetSideMenu   />
+					 <div class="w-full md:w-10/12  block md:ml-auto md:float-right " >
+						 <slot />
+					 </div>
             </main>
         </div>
     </div>

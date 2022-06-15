@@ -83,20 +83,7 @@ import { Link } from "@inertiajs/inertia-vue3";
                                 <li>
                                     <a href="mailto:info@mydesigngenius.com" class="text-sm hover:text-red-600 transition">info@mydesigngenius.com</a>
                                 </li>
-                                <li>
-                                    <form action="">
-
-                                        <label for="newsletter" class=" text-red-600 font-sans">Subscribe to our newsletter</label>
-                                        <div class="relative mt-4 ">
-                                            <input type="email" name="newsletter" id="newsletter" placeholder="Your email" class="text-sm w-full md:w-9/12 px-3 py-1 ring-1 ring-red-700 rounded-xl bg-gray-100 bg-opacity-20 invalid:ring-red-600 invalid:outline-none">
-                                            <button type="submit" title="Submit" class="absolute right-0 md:right-1/4 w-max py-1 px-3 text-center rounded-r-xl transition bg-red-600 hover:bg-black active:bg-red-600 focus:bg-red-300">
-                                                <span class="text-gray-100 font-semibold">
-                                                    Send
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>

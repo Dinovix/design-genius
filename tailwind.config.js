@@ -14,6 +14,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Stick No Bills', ...defaultTheme.fontFamily.sans],
 				serif: ['Stick', ...defaultTheme.fontFamily.sans],
+				poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
             }
         },
     },

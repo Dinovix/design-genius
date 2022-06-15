@@ -1,3 +1,31 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html {
+	scroll-behavior: smooth;
+  }
+
+  html,
+                            body {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-margin: 0;
+  scroll-padding: 0;
+  scrollbar-color: #fd0000 black;
+}
+
+nav.scrolled {
+    @apply shadow-xl bg-white text-red-600 p-0 ;
+    border-bottom: 0px;
+}
+
+nav.scrolled a, nav.scrolled li {
+	@apply text-red-600;
+}
+nav.scrolled span{
+	@apply text-slate-600  font-bold;
+}
+nav.scrolled span:hover{
+	@apply text-white font-bold;
+}

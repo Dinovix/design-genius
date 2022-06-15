@@ -1,193 +1,172 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
+import SiteLayout from '@/Pages/Website/Layouts/SiteLayout.vue';
+import HeroHeader from '@/Pages/Website/Components/HeroHeader.vue';
 
-defineProps({
-	canLogin: Boolean,
-	canRegister: Boolean,
-	laravelVersion: String,
-	phpVersion: String,
-});
+
+
+
 </script>
 
 <template>
 
-	<Head title="Home - Design Genius" />
+	<SiteLayout title="Home" >
 
-	<!-- ==== Header ==== -->
+		<template #banner >
+			<HeroHeader />
+			</template>
 
-	<header>
-		<nav class="fixed z-20 w-full">
-			<div class="container m-auto px-6 md:px-12 lg:px-6">
-				<div class="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0">
-					<div class="w-full flex justify-between lg:w-auto">
-						<a href="#" aria-label="logo">
-							<img src="img/logo.png" class="w-24" alt="Design Genius logo">
-						</a>
+		<template #content>
 
-						<button aria-label="humburger" id="hamburger" class="relative w-10 h-10 -mr-2 lg:hidden">
-							<div aria-hidden="true" id="line"
-								class="inset-0 w-6 h-0.5 m-auto rounded bg-white transition duration-300"></div>
-							<div aria-hidden="true" id="line2"
-								class="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-white transition duration-300"></div>
-						</button>
-					</div>
+			<!-- WHy US -->
+	<section class=" w-100" id="whyus">
+		<div class="py-16 bg-red-50 overflow-hidden w-100">
+			<div class="container mx-auto px-6 space-y-8 md:px-12 lg:px-20 w-100">
+				<div>
+					<span class="block w-max mx-auto py-2 px-4 rounded-full bg-red-100 text-red-700 text-sm font-semibold">Our Mission</span>
+					<h2 class="mt-4 text-center text-3xl text-red-600 font-bold md:text-4xl mb-8">
+						Forget the inconveniences that come with designing <br class="lg:block" hidden /> your favorite machines &amp; products.
+						<!-- A customer-first approach to product design  &amp; manufacturing -->
+					</h2>
+				</div>
+				<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3  md:-mx-8">
+					<div class="relative group">
+						<div aria-hidden="true" class="absolute inset-0 rounded-xl bg-white shadow-2xl transition duration-300 group-hover:bg-gradient-to-br from-black via-red-600 to-black group-hover:scale-105 lg:group-hover:scale-105"></div>
+						<div class="relative space-y-12 p-8 md:p-12 lg:p-8">
+							<div aria-hidden="true" class="w-10 h-10 flex justify-center items-center rounded-full bg-red-100 group-hover:bg-white">
+								<span class="font-bold text-red-700 ">1</span>
+							</div>
+							<div class="space-y-4">
+								<h4 class="text-2xl text-gray-800 font-medium transition group-hover:text-white">We Make Things Easier &amp; Cheaper</h4>
+								<p class="text-gray-600 group-hover:text-slate-50">We facilitate innovation, Design, Development and Manufacturing of Products for both companies and individuals.</p>
+							</div>
 
-					<div hidden
-						class="w-full bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-auto lg:flex">
-						<div class="block w-full lg:items-center lg:flex">
-							<ul
-								class="space-y-6 pb-6 tracking-wide font-medium text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
-
-								<li>
-									<Link :href="route('login')" class="text-sm text-white font-semibold block md:px-3">
-									Services
-									</Link>
-
-								</li>
-								<li>
-									<Link :href="route('login')" class="text-sm text-white font-semibold block md:px-3">
-									Products
-									</Link>
-
-								</li>
-								<li>
-									<Link :href="route('login')" class="text-sm text-white font-semibold block md:px-3">
-									Blog
-									</Link>
-
-								</li>
-								<li>
-									<Link :href="route('login')" class="text-sm text-white font-semibold block md:px-3">
-									Academy
-									</Link>
-
-								</li>
-								<li>
-									<Link :href="route('login')" class="text-sm text-white font-semibold block md:px-3">
-									Affiliates
-									</Link>
-
-								</li>
-
-							</ul>
-
-							<ul
-								class="border-t space-y-2   lg:space-y-0 lg:space-x-2 lg:pt-0 lg:pl-1 lg:border-t-0 lg:border-l lg:items-center md:flex">
-								<div v-if="canLogin" class="hidden   sm:flex scale-90">
-
-
-									<li v-if="$page.props.user" >
-										<Link :href="route('profile')"
-										class="text-sm text-gray-700 underline">
-										{{ $page.props.user.name }}
-										</Link>
-									</li>
-
-
-									<template v-else>
-
-										<li >
-											<Link :href="route('login')"
-												class="inline-block w-full py-2 px-4 rounded-md text-center transition border border-transparent active:border-red-400 sm:w-max">
-												<span class="block text-white font-semibold">
-													Login
-												</span>
-											</Link>
-										</li>
-										<li >
-										<Link v-if="canRegister" :href="route('register')"
-											class="inline-block w-full py-3 px-6 rounded-lg text-center transition bg-white active:bg-red-200 focus:bg-red-100 sm:w-max">
-											<span class="block text-sm text-red-600 font-semibold">
-												Register
-											</span>
-										</Link>
-										</li>
-									</template>
-								</div>
-
-
-
-							</ul>
 						</div>
 					</div>
+					<div class="relative group">
+						<div aria-hidden="true" class="absolute inset-0 rounded-xl bg-white shadow-2xl transition duration-300 group-hover:bg-gradient-to-br from-black via-red-600 to-black group-hover:scale-105 lg:group-hover:scale-105"></div>
+						<div class="relative space-y-12 p-8 md:p-12 lg:p-8">
+							<div aria-hidden="true" class="w-10 h-10 flex justify-center items-center rounded-full bg-red-100">
+								<span class="font-bold text-red-700">2</span>
+							</div>
+							<div class="space-y-4">
+								<h4 class="text-2xl text-gray-800 font-medium transition group-hover:text-white">Quality Work Process </h4>
+								<p class="text-gray-600 group-hover:text-slate-50">We solve each problem through Engineering, Product Design, Prototyping and Testing, with Manufacturing and marketing support.</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="relative group">
+						<div aria-hidden="true" class="absolute inset-0 rounded-xl bg-white shadow-2xl transition duration-300 group-hover:bg-gradient-to-br from-black via-red-600 to-black group-hover:scale-105 lg:group-hover:scale-105"></div>
+						<div class="relative space-y-12 p-8 md:p-12 lg:p-8">
+							<div aria-hidden="true" class="w-10 h-10 flex justify-center items-center rounded-full bg-red-100">
+								<span class="font-bold text-red-700">3</span>
+							</div>
+							<div class="space-y-4">
+								<h4 class="text-2xl text-gray-800 font-medium transition group-hover:text-white">Best Customer Service</h4>
+								<p class="text-gray-600 group-hover:text-slate-50">We do not just produce, we help you on the journey to take your product to the market as quick as possible.</p>
+							</div>
+
+						</div>
+					</div>
+
 				</div>
 			</div>
-		</nav>
-	</header>
-
-	<div class="relative min-h-screen">
-
-
-		<video autoplay loop muted
-		class="absolute inset-0 w-full h-full object-cover object-top">
-			<source src="vid/print.mp4#t=40" type="video/mp4" />
-			Your browser does not support the video tag.
-		</video>
-
-		<!-- <img class="absolute inset-0 w-full h-full object-cover object-top" src="img/print.gif" alt=""> -->
-		<div aria-hidden="true" class="absolute inset-0 w-full h-full bg-gradient-to-b from-black  via-red-600 to-transparent   bg-opacity-70 backdrop-blur-sm">
 		</div>
-		<div class="relative container m-auto py-0 px-6 md:px-12 lg:px-6">
-			<div class="mb-6 pt-40 space-y-16 md:mb-20 md:pt-56 lg:w-8/12 lg:mx-auto">
-				<h1 class="text-white text-center text-3xl font-bold sm:text-4xl  md:text-5xl pb-0 mb-0">
-					We boost  competitiveness through high-quality design and manufacturing solutions<br/>
-					<span class="text-black  text-center  text-base font-serif leading-none  ">
-					Designing the future
+	</section>
+<!--  ! Why us -->
+
+<!-- Call To Action -->
+
+<div class="py-16 bg-white">
+    <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+        <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
+            <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
+			<span class="block w-max  py-2 px-4 rounded-full bg-red-100 text-red-700 text-sm font-semibold">Discount Offer</span>
+
+                <h2 class="text-4xl text-gray-700 font-sans md:text-5xl ">
+					Order a product design &amp;  
+					benefit up to 
+					<span class="text-red-600  rounded-md font-bold animate-pulse duration-150">05% off</span>
+				</h2>
+                <p class="font-poppins">Take advantage of this unique opportunity , we successfully produce high tech
+machines at affordable prices for the African developing market. </p>
+                <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
+                    <Link href="/contact" title="Order Now" class="w-full py-2 px-6 text-center rounded-md transition bg-gray-700 shadow-xl hover:bg-red-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+                        <span class="block text-white font-semibold">
+                            Order Now
+                        </span>
+                    </Link>
+                    <Link type="button" title="more about" class="w-full order-first py-2 px-6 text-center rounded-md bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
+                        <span class="block text-gray-600 font-semibold">
+                            Our Catalog
+                        </span>
+                    </Link>
+                </div>
+            </div>
+            <!-- <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12"> -->
+            <div class="block gap-4 md:w-5/12 lg:w-6/12">
+                <div class="col-span-2 row-span-2 hidden">
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_np8ic4gc.json"  background="transparent"  speed="1"  style="width: auto;"  loop  autoplay></lottie-player>
+                </div>
+                <div class="col-span-3 row-span-2 hidden">
+                    <img src="svg/robot_arm.svg" class="w-full h-full object-contain object-top rounded-xl"  alt="robotic arm illustration" loading="lazy">
+                </div>
+                <div class="col-span-2 row-span-1">
+                    <img src="svg/discount.svg" class="w-3/4 h-auto object-contain object-top rounded-xl"  alt="discount illustration" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+                                
+<!-- !Call To Action -->
+
+
+<!-- Academy -->
+
+<div class="py-16 ">  
+  <div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+       
+        <div class="md:7/12 lg:w-6/12">
+			<span class="block w-max  py-2 px-4 mb-4 rounded-full bg-red-100 text-red-700 text-sm font-semibold" >
+				Academy Free Courses 
 				</span>
-				</h1>
+
+          <h2 class="text-2xl text-red-600 font-bold md:text-4xl"> At <b>DesignGenius</b>, we believe that <u>sharing</u> is <u>caring</u>.</h2>
+          <p class="mt-6 text-gray-600 font-poppins font-light">
+			  Get instant access to a vareity for design courses for <u> FREE ! </u>, go deep into the world of design with our experts,  all you need to do is create an account and youare good to go.</p>
+          <p class="mt-4 mb-8 text-gray-600 font-poppins font-light"> Wether your are passionate  or simply curious about this field our experts got your back!</p>
+		  
+		  <Link href="#" title="Watch Now" class="min-w-max block py-2 px-6 text-center rounded-md transition bg-gray-700 shadow-xl hover:bg-red-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+                        <span class="flex w-full text-white font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+							</svg>
+							Watch Free Courses
+                        </span>
+                    </Link>
+        </div>
+		 <div class="md:5/12 lg:w-5/12">
+          <!-- <img src="svg/startup.png" alt="image" loading="lazy" width="" height=""> -->
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_np8ic4gc.json"  background="transparent"  speed="1"  style="width: auto;"  loop  autoplay></lottie-player>
+
+        </div>
+      </div>
+  </div>
+</div>
+                                
+<!-- !Academy -->
 
 
-			</div>
+		</template>
 
-			<div class="pb-16 hidden">
-				<div class="md:px-12">
-					<span class="block text-center font-medium text-pink-50">Trusted by the best</span>
-
-					<div class="mt-8 -mx-6 px-6 overflow-x-auto md:overflow-x-hidden">
-						<div class="w-max flex justify-center flex-wrap items-center gap-4 md:w-auto md:gap-6 lg:gap-8">
-							<div class="flex items-center">
-								<img class="w-36 grayscale contrast-200 brightness-200"
-									src="https://tailus.io/images/clients/microsoft.png" alt="partner logo" loading="lazy" width="584"
-									height="122">
-							</div>
-							<div class="flex items-center">
-								<img class="w-28 grayscale contrast-200 brightness-200" src="https://tailus.io/images/clients/grabyo.png"
-									alt="partner logo" loading="lazy" width="400" height="219">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="flex justify-center items-center space-x-6">
-				<Link v-if="canRegister" :href="route('register')"
-											class="inline-block w-full py-2 px-6 rounded-lg text-center transition border-2 border-white text-white hover:text-red-600 hover:bg-red-100  sm:w-max">
-
-												Be an Affiliate
-										</Link>
-										<Link v-if="canRegister" :href="route('register')"
-											class="inline-block w-full py-2 px-6 rounded-lg text-center transition bg-white active:bg-red-200 hover:bg-red-600 hover:text-white hover:shadow-md focus:bg-red-100 sm:w-max">
-
-												Our Products
-
-										</Link>
-			</div>
-
-			<lottie-player class="absolute left-1/2 top-full -translate-x-1/2 " src="https://assets1.lottiefiles.com/packages/lf20_jfchliut.json"  background="transparent"  speed="1"  style="width: 300px; height: 200px;"  loop  autoplay></lottie-player>
-		</div>
-
-	</div>
-
-	<!-- ==== ! Header ==== -->
+	</SiteLayout>
 
 
-	<div class="container">
-		Lollipop
-	</div>
+
 
 
 
 </template>
-
-<style scoped>
-</style>

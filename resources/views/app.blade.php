@@ -3,26 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<meta name="_token" content="{{ csrf_token() }}">
         <title inertia>{{ config('app.name', 'Design Genius') }}</title>
 
         <!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 
-
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-		<style>
-			* {
-				/* font-family: 'Kdam Thmor Pro', sans-serif ; */
-			}
-		</style>
 
-        <!-- Scripts -->
+		<!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
         @inertiaHead

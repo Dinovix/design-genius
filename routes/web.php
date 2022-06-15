@@ -15,14 +15,42 @@ use Inertia\Inertia;
 |
 */
 
+/**
+ *  Website Routes
+ */
 Route::get('/', function () {
     return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name("web.home");
+
+Route::get('/services', function () {
+    return Inertia::render('Services', [
+    ]);
+})->name("web.services");
+
+Route::get('/products', function () {
+    return Inertia::render('Products', [
+    ]);
+})->name("web.products");
+
+Route::get('/blog', function () {
+    return Inertia::render('Blog', [
+    ]);
+})->name("web.blog");
+
+Route::get('/affiliates', function () {
+    return Inertia::render('Affiliates', [
+    ]);
+})->name("web.affiliates");
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact', [
+    ]);
+})->name("web.contact");
+
+/**
+ *  !Website Routes
+ */
 
 Route::middleware([
     'auth:sanctum',

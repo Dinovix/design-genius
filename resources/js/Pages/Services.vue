@@ -38,7 +38,7 @@
 		<template #content>
 
 			<div class="container mx-auto">
-				<h1>Our Services</h1>
+				
 			</div>
 
 		</template>

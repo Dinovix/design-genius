@@ -29105,7 +29105,7 @@ var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_8 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "container mx-auto"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Our Services")], -1
+  }, null, -1
   /* HOISTED */
   );
 });
@@ -30052,7 +30052,7 @@ var _hoisted_16 = {
   "class": "py-16"
 };
 var _hoisted_17 = {
-  "class": "container mx-auto px-6 text-gray-600 md:px-12 xl:px-6"
+  "class": "container mx-auto px-6 md:w-10/12 text-gray-600 md:px-12 xl:px-6"
 };
 var _hoisted_18 = {
   "class": "space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"

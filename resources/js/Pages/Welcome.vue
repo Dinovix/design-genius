@@ -126,7 +126,7 @@ machines at affordable prices for the African developing market. </p>
 <!-- Academy -->
 
 <div class="py-16 ">  
-  <div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-6">
+  <div class="container mx-auto px-6  md:w-10/12  text-gray-600 md:px-12 xl:px-6">
       <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
        
         <div class="md:7/12 lg:w-6/12">

@@ -6,13 +6,13 @@ name: CI/CD Pipeline for the shared hosting infrastructure
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: 
-      - main
+    branches:
+      - main 
       - development 
   pull_request:
     branches:
       - main 
-      - development 
+      - development
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,8 +20,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  production-deploy:
-    if: ${{ github.ref == 'refs/head/main' }}
+  web-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,8 +29,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 🚚 Get the latest code version on the main branch
         uses: actions/checkout@v3
-
-      - name: 📂 Synchronize files
+      - run: |
+          echo ${{ github.ref }}
+          echo ${{ github.ref == 'refs/head/development' }}
+      - name: '🚀 Production deployment : Files synchronization ...' 
+        if: ${{ github.ref == 'refs/head/main' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           # ftp server
@@ -40,17 +42,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           # ftp password
           password: ${{ secrets.FTP_PASSWORD }}
-          
           # server dst dir. Let it to the defualt value : ./ 
           # Who is the user default directory
-  development-deploy:
-    if: ${{ github.ref == 'refs/head/development' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get the latest code version on the development branch
-        uses: actions/checkout@v3
-        
-      - name: 📂 Files Synchronization
+      - name: '🕹️ Dev deployment : Files synchronization ...'
+        if: ${{ github.ref == 'refs/head/development' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with: 
           server: ${{ secrets.DEV_FTP_SERVER }}

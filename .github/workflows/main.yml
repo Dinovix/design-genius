@@ -29,11 +29,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 🚚 Get the latest code version on the main branch
         uses: actions/checkout@v3
-      - run: |
-          echo ${{ github.ref }}
-          echo ${{ github.ref == 'refs/head/development' }}
+        
       - name: '🚀 Production deployment : Files synchronization ...' 
-        if: ${{ github.ref == 'refs/head/main' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           # ftp server
@@ -45,7 +43,7 @@ jobs:
           # server dst dir. Let it to the defualt value : ./ 
           # Who is the user default directory
       - name: '🕹️ Dev deployment : Files synchronization ...'
-        if: ${{ github.ref == 'refs/head/development' }}
+        if: ${{ github.ref == 'refs/heads/development' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with: 
           server: ${{ secrets.DEV_FTP_SERVER }}

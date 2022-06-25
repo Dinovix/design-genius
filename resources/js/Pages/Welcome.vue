@@ -127,7 +127,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 									Order Now
 								</span>
 								</Link>
-								<Link type="button" title="more about"
+								<Link href="/products" title="more about"
 									class="w-full order-first py-2 px-6 text-center rounded-md bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
 								<span class="block text-gray-600 font-semibold">
 									Our Catalog
@@ -164,7 +164,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 				<div class="container mx-auto px-6  md:w-10/12  text-gray-600 md:px-12 xl:px-6">
 					<div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
 
-						<div class="md:7/12 lg:w-6/12">
+						<div class="md:7/12 lg:w-6/12 mr-auto">
 							<span
 								class="block w-max  py-2 px-4 mb-4 rounded-full bg-red-100 text-red-700 text-sm font-semibold">
 								Academy Free Courses
@@ -179,10 +179,10 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 							<p class="mt-4 mb-8 text-gray-600 font-poppins font-light"> Wether your are passionate or
 								simply curious about this field our experts got your back!</p>
 
-							<Link href="#" title="Watch Now"
+							<a href="https://academy.mydesigngenius.com" title="Watch Now"
 								class="min-w-max block py-2 px-6 text-center rounded-md transition bg-gray-700 shadow-xl hover:bg-red-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
 							<span class="flex w-max  justify-center text-center text-white font-semibold">
-								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
 									fill="currentColor">
 									<path fill-rule="evenodd"
 										d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
@@ -190,7 +190,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 								</svg>
 								Watch Free Courses
 							</span>
-							</Link>
+							</a>
 						</div>
 						<div class="md:5/12 lg:w-5/12">
 							<!-- <img src="svg/startup.png" alt="image" loading="lazy" width="" height=""> -->

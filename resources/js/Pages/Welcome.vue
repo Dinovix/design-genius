@@ -216,7 +216,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 							</span>
 						<h4 class="text-3xl text-red-600 uppercase font-bold mb-4"> Set your Events apart from the rest </h4>
 						<p class="text-base text-slate-50 font-poppins mb-4">
-							Our newest and coolest 360° video booth is now available for all your events, just
+							Our newest and coolest 360° video booth is now available for all your events ( birthdays, marriage...etc), just
 							<Link href="/products" class="underline cursor-pointer">
 							one click
 							</Link>
@@ -225,7 +225,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 						</p>
 
 						<p class="text-sm text-slate-100">
-							NB: Customizable on purchase only
+							NB: Customizable on purchase only*
 						</p>
 						<!--
 			<video autoplay loop muted class="w-full hidden">

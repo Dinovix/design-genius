@@ -5,8 +5,10 @@ import {Link} from '@inertiajs/inertia-vue3';
 <template>
 	<div class="relative min-h-screen">
 					<video autoplay loop muted class="absolute inset-0 w-full h-full object-cover object-top">
-						<source src="https://player.vimeo.com/video/723284532" type="video/mp4" />
-						<!-- <source src="vid/print.mp4#t=40" type="video/mp4" /> -->
+						<source src="https://player.vimeo.com/video/723284532" type="video/ogg" />
+						<source src="https://player.vimeo.com/video/723284532" type="video/ogm" />
+						<source src="https://player.vimeo.com/video/723284532" type="video/webm" />
+						<source src="vid/print.mp4#t=40" type="video/mp4" />
 						Your browser does not support the video tag.
 					</video>
 

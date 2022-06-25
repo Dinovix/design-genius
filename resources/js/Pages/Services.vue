@@ -188,7 +188,7 @@ const servicesList = [
 										wait to work on it !
 									</p>
 									<div class="mt-auto">
-										<Link href="/contact"
+										<Link href="/contact?code=3DGENIUS22"
 											class="inline-block bg-white hover:bg-gray-900 active:bg-gray-200 focus-visible:ring ring-red-300 text-red-600 hover:text-white text-sm md:text-base font-semibold text-center rounded-md outline-none transition duration-100 px-6 py-2">
 										Redeem now
 										</link>

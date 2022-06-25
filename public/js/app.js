@@ -29452,7 +29452,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }), 64
       /* STABLE_FRAGMENT */
       ))])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" content - start "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-        href: "/contact",
+        href: "/contact?code=3DGENIUS22",
         "class": "inline-block bg-white hover:bg-gray-900 active:bg-gray-200 focus-visible:ring ring-red-300 text-red-600 hover:text-white text-sm md:text-base font-semibold text-center rounded-md outline-none transition duration-100 px-6 py-2"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

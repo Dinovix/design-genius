@@ -1,7 +1,30 @@
-		<script setup>
+<script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import SiteLayout from '@/Pages/Website/Layouts/SiteLayout.vue';
 import Button from '@/Pages/Website/Components/Button.vue';
+
+const servicesList = [
+	{
+		label: "PRODUCT DESIGN & Engineering",
+		short_description: "",
+		description: "We Develop Innovative and beautiful Product that are Manufacturable and meet our Clients Business needs. We help our clients by transforming their ideas into a Professional, tangible, Productive Product.",
+	},
+	{
+		label: "Prototyping and testing",
+		short_description: "",
+		description: "We Build and test the product to make sure it meets users requirement for a better experience and Quality.",
+	},
+	{
+		label: "Manufacturing Support",
+		short_description: "",
+		description: "We can setup a production unit for your product, access to a supply chain network for ease, and high quality Production.",
+	},
+	{
+		label: "MARKETING Services",
+		short_description: "",
+		description: "We help you go to the market FAST, planning and also market research, Competitive Analysis and Brain storming with User.",
+	}
+]
 
 
 </script>
@@ -99,9 +122,45 @@ import Button from '@/Pages/Website/Components/Button.vue';
 										</svg>
 										</Link>
 									</div>
-									<div class="flex flex-col md:w-1/2 md:pl-12">
-										<h2 class="title-font font-semibold text-gray-800 tracking-wider text-sm mb-3">
-											CATEGORIES</h2>
+									<div class="flex flex-col md:w-1/2 md:pl-3">
+										<!-- <h2 class="title-font font-semibold text-gray-800 tracking-wider text-sm mb-3">
+											CATEGORIES</h2> -->
+
+										<div class="flex flex-wrap">
+											<div class="py-1 w-full" v-for="(service , index) in servicesList" v-bind:key="'service-'+ index">
+
+												<div
+													class="flex rounded-lg h-min bg-gradient-to-r hover:bg-gradient-to-bl scale-90 hover:scale-95 duration-200 from-red-600 to-red-900 p-4 flex-col">
+													<div class="flex items-center mb-3">
+														<div
+															class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-slate-50 text-slate-800 flex-shrink-0">
+															<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+															<path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+															<path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+															</svg>
+														</div>
+														<h2 class="text-white text-lg title-font font-medium uppercase">
+															{{ service.label }}
+														</h2>
+													</div>
+													<div class="flex-grow">
+														<p class="leading-relaxed text-sm font-poppins text-slate-50">
+															{{ service.description }}
+														</p>
+														<a href="/contact" class="mt-3 text-yellow-300 inline-flex items-center">Contact us
+															<svg fill="none" stroke="currentColor"
+																stroke-linecap="round" stroke-linejoin="round"
+																stroke-width="2" class="w-4 h-4 ml-2"
+																viewBox="0 0 24 24">
+																<path d="M5 12h14M12 5l7 7-7 7"></path>
+															</svg>
+														</a>
+													</div>
+												</div>
+
+
+											</div>
+										</div>
 
 									</div>
 								</div>
@@ -115,29 +174,30 @@ import Button from '@/Pages/Website/Components/Button.vue';
 
 					<div class="bg-white py-6 sm:py-8 lg:py-12 my-12">
 						<div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-							<div class="md:h-80 flex flex-col sm:flex-row bg-gradient-to-r from-red-600 to-black rounded-lg overflow-hidden">
+							<div
+								class="md:h-80 flex flex-col sm:flex-row bg-gradient-to-t md:bg-gradient-to-r from-red-600 to-black rounded-lg overflow-hidden">
 								<!-- content - start -->
 								<div class="w-full sm:w-1/2 flex flex-col p-4 sm:p-8">
 									<h2 class="text-white text-xl md:text-2xl lg:text-4xl font-bold mb-4">
-										One-time Discount <br /> Up to 20% off.
-										</h2>
+										One-time Discount <br /> Up to <b class="text-yellow-300">20% </b> off.
+									</h2>
 
 									<p class="max-w-md text-gray-100 mb-8 font-poppins">
 										Don't miss this unique opportunity,
-										take advantage of this discount to tell us about your project. Our team can't wait to work on it !
+										take advantage of this discount to tell us about your project. Our team can't
+										wait to work on it !
 									</p>
 									<div class="mt-auto">
 										<Link href="/contact"
 											class="inline-block bg-white hover:bg-gray-900 active:bg-gray-200 focus-visible:ring ring-red-300 text-red-600 hover:text-white text-sm md:text-base font-semibold text-center rounded-md outline-none transition duration-100 px-6 py-2">
-											Redeem now
+										Redeem now
 										</link>
 									</div>
 								</div>
 								<!-- content - end -->
 
 								<!-- image - start -->
-								<div
-									class="w-full sm:w-1/2  h-48 sm:h-auto order-first sm:order-none bg-gray-700">
+								<div class="w-full sm:w-1/2  h-48 sm:h-auto order-first sm:order-none bg-gray-700">
 									<img src="https://images.unsplash.com/photo-1642493815444-2ff4c30dbee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8?auto=format&q=75&fit=crop&crop=top&w=1000&h=500"
 										loading="lazy" alt="Photo by Dom Hill"
 										class="w-full h-full object-cover object-center" />

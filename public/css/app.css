@@ -1370,6 +1370,9 @@ select {
 .max-w-md {
   max-width: 28rem;
 }
+.max-w-screen-md {
+  max-width: 768px;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -3045,6 +3048,14 @@ nav.scrolled span:hover {
     margin-bottom: 5rem;
   }
 
+  .md\:mb-3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3265,6 +3276,11 @@ nav.scrolled span:hover {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px) {
 
@@ -3421,6 +3437,11 @@ nav.scrolled span:hover {
     padding-right: 1.5rem;
   }
 
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3444,6 +3465,16 @@ nav.scrolled span:hover {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .group:hover .lg\:group-hover\:scale-105 {

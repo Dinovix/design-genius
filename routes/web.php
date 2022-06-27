@@ -48,6 +48,11 @@ Route::get('/contact', function () {
     ]);
 })->name("web.contact");
 
+Route::get('/about', function () {
+    return Inertia::render('About', [
+    ]);
+})->name("web.about");
+
 /**
  *  !Website Routes
  */

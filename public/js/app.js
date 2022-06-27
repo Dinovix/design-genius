@@ -22880,7 +22880,65 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
+    var team = [// {
+    // 	first_name: "AGBOR",
+    // 	last_name: "E. Ransome",
+    // 	picture_url: "/img/team/agbor.png",
+    // 	title: "Founder / CEO",
+    // 	quote: "Designing the future...",
+    // 	social_links: {
+    // 		fb: "https://www.facebook.com/Design-Genius-266925227331326",
+    // 		ln: "https://www.linkedin.com/company/71091584",
+    // 		tw: null
+    // 	}
+    // },
+    {
+      first_name: "Habass Tiemuncho",
+      last_name: "",
+      picture_url: "/img/team/habass.png",
+      title: "Head of operation",
+      quote: "In charge of operations and process development",
+      social_links: {
+        fb: "https://www.facebook.com/Design-Genius-266925227331326",
+        ln: "https://www.linkedin.com/company/71091584",
+        tw: null
+      }
+    }, {
+      first_name: "Momo",
+      last_name: "Sadoh",
+      picture_url: "/img/team/momo.png",
+      title: "Chief automation Engineer",
+      quote: "In charge of Robotics , Electronics , IoT",
+      social_links: {
+        fb: "https://www.facebook.com/Design-Genius-266925227331326",
+        ln: "https://www.linkedin.com/company/71091584",
+        tw: null
+      }
+    }, {
+      first_name: "Kouamo",
+      last_name: "Franklin",
+      picture_url: "/img/team/kouamo.png",
+      title: "Chief Mechanical Engineer",
+      quote: "In charge of Mechanical Product Design, Prototyping and Manufacturing",
+      social_links: {
+        fb: "https://www.facebook.com/Design-Genius-266925227331326",
+        ln: "https://www.linkedin.com/company/71091584",
+        tw: null
+      }
+    }, {
+      first_name: "Neba",
+      last_name: "Cornelius",
+      picture_url: "/img/team/neba.png",
+      title: "Mechanical engineer/Head of Production",
+      quote: "Head of Production Responsible for Production",
+      social_links: {
+        fb: "https://www.facebook.com/Design-Genius-266925227331326",
+        ln: "https://www.linkedin.com/company/71091584",
+        tw: null
+      }
+    }];
     var __returned__ = {
+      team: team,
       SiteLayout: _Pages_Website_Layouts_SiteLayout_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -27041,7 +27099,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "bg-gray-100 rounded-lg px-4 py-6 md:py-8 lg:py-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-red-500 lg:text-lg font-semibold text-center mb-2 md:mb-3"
-}, "About Design Genius"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+}, "About Design Genius "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6"
 }, " We are designing the future. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "max-w-screen-md text-gray-500 md:text-lg text-center mx-auto"
@@ -27049,13 +27107,221 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
+var _hoisted_2 = {
+  "class": "flex flex-col container md:w-10/12 px-4 md:px-8 mx-auto"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex bg-transparent py-6 sm:py-8 lg:py-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "grid md:grid-cols-2 gap-8 lg:gap-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "h-full flex place-items-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "h-auto col-4/12 bg-gray-100 overflow-hidden rounded-lg shadow-lg"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/img/team/agbor_dg.jpg",
+  loading: "lazy",
+  alt: "Photo by DesignGenius Team",
+  "class": "w-full h-full object-cover object-center"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("caption", {
+  "class": "w-full text-red-600 text-sm"
+}, " CEO / Founder of Design Genius ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-red-500 font-bold text-center md:text-left"
+}, "Who we are"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+  "class": "text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4"
+}, " Long story short "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-gray-600 mb-6 md:mb-8 text-justify font-poppins"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Passionate about engineering design, our founder, "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", {
+  "class": "text-black"
+}, "Eng. Agbor Edouard Ransome "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("in 2018 would design and build machines for graduating student’s projects. Realizing that his skill was needed, yeah, making some money out of the services rendered too led him to thinking about doing this thing big hence the birth of Design Genius. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", {
+  "class": "mb-2"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" In 2019, he built a team of 5 persons (including himself) with the same passion for the application of scientific knowledge in solving technical problems and Design Genius kicked off mainly offering engineering design services to graduating students through trainings on design and designing and manufacturing services. ")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", {
+  "class": "mb-2"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "font-poppins"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" An idea from a bedroom to a dynamic team of individuals designing and building their first automatic hand washing machine after the covid-19 outbreak, a cassava processing truck at FABLAB and landing an international design contract designing an automatic food dispenser in Ghana all in the same year (2019) Design Genius "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("u", null, "launched in 2022"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" with its physical location at Bonaberi, Douala CAMEROON and at the same introducing new products to its market. ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "container mx-auto pt-24",
+  hidden: ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-red-600 text-2xl sm:text-3xl text-center md:text-left mb-4 md:mb-6"
+}, " Our Competitive Advantage"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-gray-500 mb-6 md:mb-8 text-justify"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" At Design Genius, we boost the competitiveness of African companies through provision of design and manufacturing solutions that help reduce production time, minimize human error while ensuring the security of workers hence increase productivity. All of this made possible by the use of Computerized Numerical Control (CNC) systems, Robotics, Internet of Things (IoT) and Artificial Intelligence technologies to optimize efficiency of produced machines. The machines designed and built by our super competent engineering team benefits several sectors such as agricultural, food processing and entertainment sectors throughout Africa. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", {
+  "class": "mb-2"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" We helping our clients save time needed to build a product design team either for the development of new or existing products and take their products to the market in no time through our product design and manufacturing services, prototyping and testing, marketing support. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", {
+  "class": "mb-2"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" At Design Genius, we enable people of all ages acquire technological skills and become valuable in the job market of today’s technologically advanced world by providing trainings on technology like design engineering and building, app development etc... ")])])])], -1
+/* HOISTED */
+);
+
+var _hoisted_4 = {
+  "class": "text-gray-600 body-font"
+};
+var _hoisted_5 = {
+  "class": "px-5 py-24 mx-auto"
+};
+var _hoisted_6 = {
+  "class": "flex flex-col text-center w-full mb-20"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-2xl mb-4 text-red-600 tracking-widest"
+}, "OUR TEAM", -1
+/* HOISTED */
+);
+
+var _hoisted_8 = {
+  "class": "mx-auto leading-relaxed font-poppins"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" As a team, we commit ourselves to continuously improving our processes to enhance quality of our machines, providing defect-free products on time with quality customer care and service. ");
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+/* HOISTED */
+);
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, "Our core values : ", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = {
+  "class": "flex flex-wrap -m-4"
+};
+var _hoisted_13 = {
+  "class": "h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+};
+var _hoisted_14 = ["src"];
+var _hoisted_15 = {
+  "class": "flex-grow sm:pl-8"
+};
+var _hoisted_16 = {
+  "class": "title-font font-bold text-black font-poppins"
+};
+var _hoisted_17 = {
+  "class": "text-red-600 mb-3"
+};
+var _hoisted_18 = {
+  "class": "mb-4"
+};
+var _hoisted_19 = {
+  "class": "inline-flex"
+};
+var _hoisted_20 = ["href"];
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  "class": "w-5 h-5",
+  viewBox: "0 0 24 24"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_22 = [_hoisted_21];
+var _hoisted_23 = ["href"];
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  "class": "w-5 h-5",
+  viewBox: "0 0 24 24"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_25 = [_hoisted_24];
+var _hoisted_26 = ["href"];
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  "class": "w-5 h-5 border-0",
+  viewBox: "0 0 24 24",
+  xmlns: "http://www.w3.org/2000/svg"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("title", null, "LinkedIn"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_28 = [_hoisted_27];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["SiteLayout"], null, {
     banner: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_1];
     }),
     content: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  Our Team "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_8, [_hoisted_9, _hoisted_10, _hoisted_11, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(["Teamwork", "Respect", "Continuous Improvement and Integrity", "Quality policy"], function (cv, index) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+          key: 'core_value_' + index,
+          "class": "bg-red-400 bg-opacity-20 text-red-700 p-2 py-1 rounded-full mx-1 text-xs"
+        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(cv), 1
+        /* TEXT */
+        );
+      }), 64
+      /* STABLE_FRAGMENT */
+      ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.team, function (staff, index) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+          "class": "p-4 lg:w-1/2",
+          key: 'memeber-' + index
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+          alt: "team",
+          width: "150",
+          height: "150",
+          loading: "lazy",
+          "class": "flex-shrink-0 rounded-full object-cover object-center sm:mb-0 mb-4 grayscale hover:grayscale-0 scale-95 hover:scale-100 duration-150",
+          src: staff.picture_url
+        }, null, 8
+        /* PROPS */
+        , _hoisted_14), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(staff.first_name + " " + staff.last_name), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(staff.title), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(staff.quote), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_19, [staff.social_links.fb ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+          key: 0,
+          "class": "text-gray-500 hover:text-red-600",
+          href: staff.social_links.fb,
+          target: "_blank"
+        }, _hoisted_22, 8
+        /* PROPS */
+        , _hoisted_20)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), staff.social_links.tw ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+          key: 1,
+          "class": "ml-2 text-gray-500 hover:text-red-600",
+          href: staff.social_links.tw,
+          target: "_blank"
+        }, _hoisted_25, 8
+        /* PROPS */
+        , _hoisted_23)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), staff.social_links.ln ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+          key: 2,
+          "class": "ml-2 text-gray-500 hover:text-red-600",
+          href: staff.social_links.ln,
+          target: "_blank"
+        }, _hoisted_28, 8
+        /* PROPS */
+        , _hoisted_26)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]);
+      }), 64
+      /* STABLE_FRAGMENT */
+      ))])])])])];
     }),
     _: 1
     /* STABLE */

@@ -10,7 +10,7 @@ const props = defineProps({
 		type: Boolean,
 		default: route().has('register'),
 	},
-	
+
 });
 
 
@@ -19,19 +19,19 @@ const props = defineProps({
 <template>
 	<nav :class="{ 'scrolled': (!view.atTopOfPage || !route().current('web.home')) }" class="fixed z-20 w-full animated  transition duration-300">
 			<div class="container m-auto px-6 md:px-12 lg:px-6">
-				<div class="flex flex-wrap items-center justify-between py-6 gap-2 md:py-0 md:gap-0">
-					<div class="w-full flex justify-between lg:w-auto">
+				<div class="flex flex-wrap items-center justify-between  gap-2 md:py-0 md:gap-0">
+					<div class="w-full flex justify-between lg:w-auto place-items-center">
 						<a href="#" aria-label="logo">
 							<img src="img/logo.png" class="w-24" alt="Design Genius logo">
 						</a>
-
 						<button aria-label="humburger" id="hamburger" class="relative w-10 h-10 -mr-2 lg:hidden">
 							<div aria-hidden="true" id="line"
-								class="inset-0 w-6 h-0.5 m-auto rounded bg-white transition duration-300"></div>
+								class="inset-0 w-6 h-0.5 m-auto rounded bg-red-600 transition duration-300"></div>
 							<div aria-hidden="true" id="line2"
-								class="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-white transition duration-300"></div>
+								class="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-red-600 transition duration-300"></div>
 						</button>
-					</div>
+
+							</div>
 
 					<div hidden
 						class="w-full bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-auto lg:flex">

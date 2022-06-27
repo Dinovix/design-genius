@@ -1796,6 +1796,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2044,6 +2048,12 @@ select {
 }
 .pt-20 {
   padding-top: 5rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
+.pt-14 {
+  padding-top: 3.5rem;
 }
 .text-left {
   text-align: left;
@@ -3019,6 +3029,10 @@ nav.scrolled span:hover {
     float: right;
   }
 
+  .md\:m-8 {
+    margin: 2rem;
+  }
+
   .md\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
@@ -3208,6 +3222,10 @@ nav.scrolled span:hover {
     padding: 2.5rem;
   }
 
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -3231,6 +3249,11 @@ nav.scrolled span:hover {
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .md\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .md\:pt-8 {

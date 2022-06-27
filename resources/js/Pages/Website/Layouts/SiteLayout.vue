@@ -23,8 +23,9 @@ const logout = () => {
 
 		<header>
 			<Nav />
-			<slot name="banner" />
-			
+			<div  :class="{ 'pt-10': !route().current('web.home')}" ></div>
+			<slot name="banner"/>
+
 		</header>
 
 		<slot name="content" />

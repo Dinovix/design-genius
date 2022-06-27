@@ -27,10 +27,10 @@ import SiteLayout from '@/Pages/Website/Layouts/SiteLayout.vue';
 
 		<template #content>
 			<section class="w-full text-gray-600 body-font relative  px-8 md:px-12 ">
-				<form class=" p-6 w-full mx-auto flex flex-row-reverse justify-between">
+				<form class=" md:p-6 w-full mx-auto flex flex-col-reverse md:flex-row-reverse justify-between">
 					<div
 						class="w-full md:w-5/12
-						 bg-gray-300 rounded-lg overflow-hidden sm:ml-auto p-10 flex items-end justify-start relative">
+						 bg-gray-300 rounded-lg overflow-hidden sm:ml-auto p-10 mt-6 flex items-end justify-start relative">
 
 							<iframe
 							class="absolute inset-0" style="filter: grayscale(1) contrast(1.2) opacity(0.4);border:0;"
@@ -41,7 +41,7 @@ import SiteLayout from '@/Pages/Website/Layouts/SiteLayout.vue';
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade">
 							</iframe>
-						<div class="bg-white relative flex flex-wrap py-6 rounded shadow-md font-poppins">
+						<div class="bg-white relative flex flex-wrap md:py-6 rounded shadow-md font-poppins">
 							<div class=" px-6">
 								<h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
 								<p class="mt-1 font-sans">Yaounde, Cameroun</p>
@@ -55,7 +55,7 @@ import SiteLayout from '@/Pages/Website/Layouts/SiteLayout.vue';
 							</div>
 						</div>
 					</div>
-					<div class="w-full md:w-7/12  bg-white flex flex-col  m-8 md:mt-0">
+					<div class="w-full md:w-7/12  bg-white flex flex-col  md:m-8 md:mt-0">
 						<p class="leading-relaxed mb-5 text-gray-600 font-poppins">We are glad to here from you !</p>
 						<div class="form-group flex space-x-2 my-4">
 								<div class="relative  md:w-1/2">

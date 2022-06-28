@@ -22,7 +22,7 @@ const props = defineProps({
 				<div class="flex flex-wrap items-center justify-between  gap-2 md:py-0 md:gap-0">
 					<div class="w-full flex justify-between lg:w-auto place-items-center">
 						<a href="#" aria-label="logo">
-							<img src="img/logo.png" class="w-24" alt="Design Genius logo">
+							<img src="/img/logo.png" class="w-24" alt="Design Genius logo">
 						</a>
 						<button aria-label="humburger" id="hamburger" class="relative w-10 h-10 -mr-2 lg:hidden">
 							<div aria-hidden="true" id="line"

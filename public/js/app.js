@@ -31032,7 +31032,7 @@ var _hoisted_2 = {
   "class": "flex flex-wrap items-center justify-between gap-2 md:py-0 md:gap-0"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full flex justify-between lg:w-auto place-items-center\"><a href=\"#\" aria-label=\"logo\"><img src=\"img/logo.png\" class=\"w-24\" alt=\"Design Genius logo\"></a><button aria-label=\"humburger\" id=\"hamburger\" class=\"relative w-10 h-10 -mr-2 lg:hidden\"><div aria-hidden=\"true\" id=\"line\" class=\"inset-0 w-6 h-0.5 m-auto rounded bg-red-600 transition duration-300\"></div><div aria-hidden=\"true\" id=\"line2\" class=\"inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-red-600 transition duration-300\"></div></button></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full flex justify-between lg:w-auto place-items-center\"><a href=\"#\" aria-label=\"logo\"><img src=\"/img/logo.png\" class=\"w-24\" alt=\"Design Genius logo\"></a><button aria-label=\"humburger\" id=\"hamburger\" class=\"relative w-10 h-10 -mr-2 lg:hidden\"><div aria-hidden=\"true\" id=\"line\" class=\"inset-0 w-6 h-0.5 m-auto rounded bg-red-600 transition duration-300\"></div><div aria-hidden=\"true\" id=\"line2\" class=\"inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-red-600 transition duration-300\"></div></button></div>", 1);
 
 var _hoisted_4 = {
   hidden: "",

@@ -33,6 +33,10 @@ Route::get('/products', function () {
     ]);
 })->name("web.products");
 
+Route::get('/product/details/{product}', function ($product) {
+    return Inertia::render('ProductDetails', compact("product" ));
+})->name("web.product_details");
+
 Route::get('/blog', function () {
     return Inertia::render('Blog', [
     ]);

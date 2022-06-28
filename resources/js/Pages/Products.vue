@@ -74,9 +74,9 @@ const products = [
 					<div class="mb-10 md:mb-16">
 						<h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Our Catalog</h2>
 
-						<p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">This is a section of
-							some simple filler text, also known as placeholder text. It shares some characteristics of a
-							real written text but is random or otherwise generated.</p>
+						<p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
+							Checkout out some of our high quality products that are currently available and offered  to you at the lowest possible prices on the market.
+						</p>
 					</div>
 					<!-- text - end -->
 

@@ -28458,7 +28458,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   allowfullscreen: "",
   loading: "lazy",
   referrerpolicy: "no-referrer-when-downgrade"
-}, "\n\t\t\t\t\t\t\t"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+}, "\r\n\t\t\t\t\t\t\t"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-white relative flex flex-wrap md:py-6 rounded shadow-md font-poppins"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "px-6"
@@ -29004,7 +29004,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6"
 }, "Our Catalog"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "max-w-screen-md text-gray-500 md:text-lg text-center mx-auto"
-}, "This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" text - end ")], -1
+}, " Checkout out some of our high quality products that are currently available and offered to you at the lowest possible prices on the market. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" text - end ")], -1
 /* HOISTED */
 );
 

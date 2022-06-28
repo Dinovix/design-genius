@@ -12,7 +12,7 @@ import { Link } from "@inertiajs/inertia-vue3";
                 <div class=" font-poppins mx-auto">
                     <div class="pb-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
 						<div class="  pr-16 mr-auto">
-							<img  src="img/logo.png" alt="logo design genius" class="w-64" />
+							<img  src="/img/logo.png" alt="logo design genius" class="w-64" />
 
 							<br/>
 							<div class="flex flex-wrap flex-col-reverse gap-6 mt-6 sm:flex-row sm:mt-0 sm:items-center">

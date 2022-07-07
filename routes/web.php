@@ -42,6 +42,12 @@ Route::get('/blog', function () {
     ]);
 })->name("web.blog");
 
+Route::get('/blog/content/{id}', function ($id) {
+    return Inertia::render('BlogDetails', [
+		"blog_id" => $id
+    ]);
+})->name("web.blog");
+
 Route::get('/affiliates', function () {
     return Inertia::render('Affiliates', [
     ]);

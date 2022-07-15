@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,13 +16,14 @@ return new class extends Migration
     {
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreignIdFor(User::class);
             $table->string('title');
             $table->string('author')->nullable();
-            $table->string('desc')->nullable();
-            $table->string('image')->nullable();
+            $table->string('description')->nullable();
+            $table->string('banner')->nullable();
             $table->string('content');
+			$table->string('tags')->nullable();
+			$table->integer('likes')->default(0);
             $table->timestamps();
         });
     }

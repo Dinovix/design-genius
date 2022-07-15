@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Discount;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,22 +16,22 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('product_categories');
-            $table->unsignedBigInteger('discount_id');
-            $table->foreign('discount_id')->references('id')->on('discounts');
+            $table->foreignIdFor(Category::class);
+            $table->foreignIdFor(Discount::class);
             $table->string('name');
-            $table->decimal('price');
-            $table->decimal('weigth');
-            $table->string('cart_desc');
-            $table->string('short_desc');
-            $table->string('long_desc');
-            $table->string('image');
-            $table->double('stock');
-            $table->boolean('unlimited');
+            $table->decimal('sale_price');
+            $table->boolean('is_rentable')->default(false);
+            $table->decimal('rent_price')->default(0.0);
+            $table->decimal('weight')->nullable();
+            $table->string('available_colors')->nullable();
+            $table->string('cart_description');
+            $table->string('short_description');
+            $table->string('long_description');
+            $table->string('features')->default("[]"); // string array of product's features
+            $table->double('quantity')->nullable();
+            $table->boolean('unlimited')->default(false);
             $table->string('location')->nullable();
-            $table->date('live')->nullable();
-            $table->string('thumb')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
             $table->comment("List of products");

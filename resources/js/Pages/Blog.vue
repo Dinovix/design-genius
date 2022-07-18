@@ -75,7 +75,7 @@ your niche`,
 
 						<div class="group space-y-4 w-11/12  lg:w-5/12 m-5 " v-for="(post, index) in articles"
 							:key="'blog-post-' + index">
-							<Link :href="route('web.blog', post.id)">
+							<Link :href="route('web.blog_details', post.id)">
 
 							<img :src="post.image" :alt="post.title + ' cover'" loading="lazy"
 								class="h-64 w-full  object-cover object-top rounded-xl transition duration-500 group-hover:rounded-3xl">
@@ -90,13 +90,13 @@ your niche`,
 										}}</span>
 								</div>
 								<div class="space-y-4">
-									<Link :href="route('web.blog', post.id)">
+									<Link :href="route('web.blog_details', post.id)">
 									<h4 class="text-lg font-semibold font-poppins text-gray-700">{{ post.title }}</h4>
 									</Link>
 
 								</div>
 							</div>
-							<Link :href="route('web.blog', post.id)"
+							<Link :href="route('web.blog_details', post.id)"
 								class="block w-max text-xs font-poppins text-red-600 hover:font-medium">Read more</Link>
 						</div>
 

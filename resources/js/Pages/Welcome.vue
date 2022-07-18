@@ -206,10 +206,10 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 
 			<!-- 360° Video Booth CTA-->
 			<section
-				class="container flex relative items-center justify-center h-screen m-auto mb-12 p-0 bg-fixed bg-center bg-cover bg-booth">
+				class="flex relative w-full items-center justify-center h-screen m-auto mb-12 p-0 bg-fixed bg-center bg-cover bg-booth">
 				<div class="absolute inset-0 w-full h-full bg-slate-900   bg-opacity-70 blur-sm"></div>
-				<div class="w-full h-full flex flex-wrap p-36 justify-between place-items-center  z-10">
-					<div class=" rounded-lg p-2 w-full md:w-1/2 scale-110">
+				<div class="w-full h-full flex flex-wrap p-6 md:p-12 lg:p-36 justify-between place-items-center  z-10">
+					<div class=" rounded-lg p-2   w-full md:w-1/2 scale-110 mb-3">
 
 							<span class="block w-max  py-2 px-4 mb-4 rounded-full bg-red-100 text-red-700 text-sm font-semibold bg-opacity-60">
 								Our Latest Product
@@ -217,7 +217,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 						<h4 class="text-3xl text-red-600 uppercase font-bold mb-4"> Set your Events apart from the rest </h4>
 						<p class="text-base text-slate-50 font-poppins mb-4">
 							Our newest and coolest 360° video booth is now available for all your events ( birthdays, marriage...etc), just
-							<Link href="/products" class="underline cursor-pointer">
+							<Link :href="route('web.products')" class="underline cursor-pointer">
 							one click
 							</Link>
 							away 😏.

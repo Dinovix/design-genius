@@ -5,10 +5,11 @@ import {Link} from '@inertiajs/inertia-vue3';
 <template>
 	<div class="relative min-h-screen">
 					<video autoplay loop muted class="absolute inset-0 w-full h-full object-cover object-top">
-						<source src="https://player.vimeo.com/video/723284532" type="video/ogg" />
-						<source src="https://player.vimeo.com/video/723284532" type="video/ogm" />
-						<source src="https://player.vimeo.com/video/723284532" type="video/webm" />
-						<source src="vid/print.mp4#t=40" type="video/mp4" />
+						<!--  360p -->
+						<source src="https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082707.mp4~hmac=2ddba2ab78fc35705eb63a5aacd95c953b99a1e14fc33c1577ec2f255b48503e/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082707.mp4" type="video/mp4" />
+						<!-- 720p  -->
+						<source src="https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082689.mp4~hmac=c8373e05eb4f7e0e5c0fbeb9024bb225bfba22badb219670687106ff6f62fab6/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082689.mp4" type="video/mp4" />
+						<!-- <source src="vid/print.mp4#t=40" type="video/mp4" />	 -->
 						Your browser does not support the video tag.
 					</video>
 
@@ -21,7 +22,7 @@ import {Link} from '@inertiajs/inertia-vue3';
 							<h1 class="text-white text-center text-3xl font-bold sm:text-4xl  md:text-5xl pb-0 mb-0">
 								We boost competitiveness through high-quality design and manufacturing solutions<br />
 								<span class="text-black  text-center  text-base font-serif leading-none  ">
-									Designing the future
+									Designing the future...
 								</span>
 							</h1>
 

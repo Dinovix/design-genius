@@ -28578,7 +28578,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "group space-y-4 w-11/12 lg:w-5/12 m-5",
           key: 'blog-post-' + index
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-          href: _ctx.route('web.blog', post.id)
+          href: _ctx.route('web.blog_details', post.id)
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -28607,7 +28607,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128
         /* KEYED_FRAGMENT */
         ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-          href: _ctx.route('web.blog', post.id)
+          href: _ctx.route('web.blog_details', post.id)
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
@@ -28620,7 +28620,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, 1032
         /* PROPS, DYNAMIC_SLOTS */
         , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-          href: _ctx.route('web.blog', post.id),
+          href: _ctx.route('web.blog_details', post.id),
           "class": "block w-max text-xs font-poppins text-red-600 hover:font-medium"
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31379,7 +31379,20 @@ var _hoisted_1 = {
   "class": "relative min-h-screen"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<video autoplay loop muted class=\"absolute inset-0 w-full h-full object-cover object-top\"><source src=\"https://player.vimeo.com/video/723284532\" type=\"video/ogg\"><source src=\"https://player.vimeo.com/video/723284532\" type=\"video/ogm\"><source src=\"https://player.vimeo.com/video/723284532\" type=\"video/webm\"><source src=\"vid/print.mp4#t=40\" type=\"video/mp4\"> Your browser does not support the video tag. </video>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
+  autoplay: "",
+  loop: "",
+  muted: "",
+  "class": "absolute inset-0 w-full h-full object-cover object-top"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  360p "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
+  src: "https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082707.mp4~hmac=2ddba2ab78fc35705eb63a5aacd95c953b99a1e14fc33c1577ec2f255b48503e/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082707.mp4",
+  type: "video/mp4"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 720p  "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
+  src: "https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082689.mp4~hmac=c8373e05eb4f7e0e5c0fbeb9024bb225bfba22badb219670687106ff6f62fab6/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082689.mp4",
+  type: "video/mp4"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <source src=\"vid/print.mp4#t=40\" type=\"video/mp4\" />\t "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Your browser does not support the video tag. ")], -1
+/* HOISTED */
+);
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "aria-hidden": "true",
@@ -31398,7 +31411,7 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-white text-center text-3xl font-bold sm:text-4xl md:text-5xl pb-0 mb-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" We boost competitiveness through high-quality design and manufacturing solutions"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "text-black text-center text-base font-serif leading-none"
-}, " Designing the future ")])], -1
+}, " Designing the future... ")])], -1
 /* HOISTED */
 );
 
@@ -31511,23 +31524,27 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Affiliates ");
 
-var _hoisted_13 = {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" About us ");
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Contact us ");
+
+var _hoisted_15 = {
   "class": "border-t space-y-2 lg:space-y-0 lg:space-x-2 lg:pt-0 lg:pl-1 lg:border-t-0 lg:border-l lg:items-center md:flex"
 };
-var _hoisted_14 = {
+var _hoisted_16 = {
   "class": "hidden sm:flex scale-90"
 };
-var _hoisted_15 = {
+var _hoisted_17 = {
   key: 0
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "-block"
 }, " Login ", -1
 /* HOISTED */
 );
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "block"
 }, " Register ", -1
 /* HOISTED */
@@ -31587,7 +31604,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href"])]), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-    href: _ctx.affiliates,
+    href: _ctx.route('web.affiliates'),
     "class": "text-sm text-white font-semibold block md:px-3"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31598,7 +31615,31 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_ctx.$page.props.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+  , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+    href: _ctx.route('web.about'),
+    "class": "text-sm text-white font-semibold block md:px-3"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_13];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+    href: _ctx.route('web.contact'),
+    "class": "text-sm text-white font-semibold block md:px-3"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_14];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_ctx.$page.props.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: _ctx.route('profile'),
     "class": "text-sm text-gray-700 underline"
   }, {
@@ -31619,7 +31660,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "inline-block w-full py-1 px-4 rounded-lg text-center transition border border-transparent hover:bg-red-600 text-white font-semibold active:bg-red-200 focus:bg-red-100 active:border-red-600 sm:w-max"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_16];
+      return [_hoisted_18];
     }),
     _: 1
     /* STABLE */
@@ -31631,7 +31672,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "inline-block w-full py-1 px-4 rounded-lg text-center transition bg-white hover:bg-red-600 hover:text-white active:bg-red-200 focus:bg-red-100 sm:w-max"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_17];
+      return [_hoisted_19];
     }),
     _: 1
     /* STABLE */
@@ -32074,7 +32115,7 @@ var _hoisted_20 = {
   "class": "md:5/12 lg:w-5/12"
 };
 var _hoisted_21 = {
-  "class": "container flex relative items-center justify-center h-screen m-auto mb-12 p-0 bg-fixed bg-center bg-cover bg-booth"
+  "class": "flex relative w-full items-center justify-center h-screen m-auto mb-12 p-0 bg-fixed bg-center bg-cover bg-booth"
 };
 
 var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
@@ -32086,10 +32127,10 @@ var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_23 = {
-  "class": "w-full h-full flex flex-wrap p-36 justify-between place-items-center z-10"
+  "class": "w-full h-full flex flex-wrap p-6 md:p-12 lg:p-36 justify-between place-items-center z-10"
 };
 var _hoisted_24 = {
-  "class": "rounded-lg p-2 w-full md:w-1/2 scale-110"
+  "class": "rounded-lg p-2 w-full md:w-1/2 scale-110 mb-3"
 };
 
 var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
@@ -32185,7 +32226,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         loop: "",
         autoplay: ""
       })])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" !Academy "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 360° Video Booth CTA"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_21, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [_hoisted_25, _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
-        href: "/products",
+        href: _ctx.route('web.products'),
         "class": "underline cursor-pointer"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -32194,7 +32235,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         _: 1
         /* STABLE */
 
-      }), _hoisted_30]), _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\r\n\t\t\t<video autoplay loop muted class=\"w-full hidden\">\r\n\t\t\t\t\t\t<source src=\"/vid/booth.mp4\" type=\"video/mp4\" />\r\n\t\t\t\t\t\tYour browser does not support the video tag.\r\n\t\t\t</video> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+      }, 8
+      /* PROPS */
+      , ["href"]), _hoisted_30]), _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n\t\t\t<video autoplay loop muted class=\"w-full hidden\">\n\t\t\t\t\t\t<source src=\"/vid/booth.mp4\" type=\"video/mp4\" />\n\t\t\t\t\t\tYour browser does not support the video tag.\n\t\t\t</video> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
         href: "/contact",
         "class": "px-4 py-2 max-h-max cursor-pointer text-white bg-red-600 hover:bg-slate-800 rounded-lg"
       }, {
@@ -32428,7 +32471,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.similar-blog-content[data-v-67a19927] {\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 2;\n\t-webkit-box-orient: vertical;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.similar-blog-content[data-v-67a19927] {\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis;\r\n\tdisplay: -webkit-box;\r\n\t-webkit-line-clamp: 2;\r\n\t-webkit-box-orient: vertical;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -32476,7 +32519,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-booth[data-v-317d1a6e]{\r\n\tbackground-image: url(\"https://onephotobooth.com/wp-content/uploads/2021/12/360-header-photo-1024x683-1.jpg\");\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-booth[data-v-317d1a6e]{\n\tbackground-image: url(\"https://onephotobooth.com/wp-content/uploads/2021/12/360-header-photo-1024x683-1.jpg\");\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

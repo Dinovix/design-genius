@@ -1364,6 +1364,9 @@ select {
 .w-2\/5 {
   width: 40%;
 }
+.w-screen {
+  width: 100vw;
+}
 .min-w-0 {
   min-width: 0px;
 }

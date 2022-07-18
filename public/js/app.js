@@ -31378,34 +31378,44 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "relative min-h-screen"
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
+var _hoisted_2 = {
   autoplay: "",
   loop: "",
   muted: "",
-  "class": "absolute inset-0 w-full h-full object-cover object-top"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  360p "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
+  hidden: ""
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
   src: "https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082707.mp4~hmac=2ddba2ab78fc35705eb63a5aacd95c953b99a1e14fc33c1577ec2f255b48503e/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082707.mp4",
   type: "video/mp4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 720p  "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
-  src: "https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082689.mp4~hmac=c8373e05eb4f7e0e5c0fbeb9024bb225bfba22badb219670687106ff6f62fab6/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082689.mp4",
-  type: "video/mp4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <source src=\"vid/print.mp4#t=40\" type=\"video/mp4\" />\t "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Your browser does not support the video tag. ")], -1
+}, null, -1
 /* HOISTED */
 );
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Your browser does not support the video tag. ");
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
+  "class": "absolute inset-0 w-screen h-scren object-cover object-top",
+  src: "https://player.vimeo.com/video/723284532?h=9b100b558a&autoplay=1&loop=1&title=0&byline=0&portrait=0",
+  frameborder: "0",
+  allow: "autoplay; fullscreen;muted",
+  allowfullscreen: ""
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "aria-hidden": "true",
   "class": "absolute inset-0 w-full h-full bg-gradient-to-b from-black via-red-600 to-transparent bg-opacity-70 backdrop-blur-sm"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_7 = {
   "class": "relative container m-auto py-0 px-6 md:px-12 lg:px-6"
 };
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mb-6 pt-40 space-y-16 md:mb-20 md:pt-56 lg:w-8/12 lg:mx-auto"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-white text-center text-3xl font-bold sm:text-4xl md:text-5xl pb-0 mb-0"
@@ -31415,34 +31425,36 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_9 = {
   key: 0,
   "class": "pb-16"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"md:px-12\"><span class=\"block text-center font-medium text-pink-50\">Trusted by the best</span><div class=\"mt-8 -mx-6 px-6 overflow-x-auto md:overflow-x-hidden\"><div class=\"w-max flex justify-center flex-wrap items-center gap-4 md:w-auto md:gap-6 lg:gap-8\"><div class=\"flex items-center\"><img class=\"w-36 grayscale contrast-200 brightness-200\" src=\"https://design genius.io/images/clients/microsoft.png\" alt=\"partner logo\" loading=\"lazy\" width=\"584\" height=\"122\"></div><div class=\"flex items-center\"><img class=\"w-28 grayscale contrast-200 brightness-200\" src=\"https://design genius.io/images/clients/grabyo.png\" alt=\"partner logo\" loading=\"lazy\" width=\"400\" height=\"219\"></div></div></div></div>", 1);
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"md:px-12\"><span class=\"block text-center font-medium text-pink-50\">Trusted by the best</span><div class=\"mt-8 -mx-6 px-6 overflow-x-auto md:overflow-x-hidden\"><div class=\"w-max flex justify-center flex-wrap items-center gap-4 md:w-auto md:gap-6 lg:gap-8\"><div class=\"flex items-center\"><img class=\"w-36 grayscale contrast-200 brightness-200\" src=\"https://design genius.io/images/clients/microsoft.png\" alt=\"partner logo\" loading=\"lazy\" width=\"584\" height=\"122\"></div><div class=\"flex items-center\"><img class=\"w-28 grayscale contrast-200 brightness-200\" src=\"https://design genius.io/images/clients/grabyo.png\" alt=\"partner logo\" loading=\"lazy\" width=\"400\" height=\"219\"></div></div></div></div>", 1);
 
-var _hoisted_8 = [_hoisted_7];
-var _hoisted_9 = {
+var _hoisted_11 = [_hoisted_10];
+var _hoisted_12 = {
   "class": "flex justify-center items-center space-x-6"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Become an Affiliate ");
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Become an Affiliate ");
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Our Products ");
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Our Products ");
 
-var _hoisted_12 = {
+var _hoisted_15 = {
   href: "#whyus"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_lottie_player = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("lottie-player");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <img class=\"absolute inset-0 w-full h-full object-cover object-top\" src=\"img/print.gif\" alt=\"\"> "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5,  false ? (0) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("  360p "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 720p  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <source src=\"https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082689.mp4~hmac=c8373e05eb4f7e0e5c0fbeb9024bb225bfba22badb219670687106ff6f62fab6/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082689.mp4\" type=\"video/mp4\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <source src=\"vid/print.mp4#t=40\" type=\"video/mp4\" />\t "), _hoisted_4], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, false]]), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <img class=\"absolute inset-0 w-full h-full object-cover object-top\" src=\"img/print.gif\" alt=\"\"> "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8,  false ? (0) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: "/affiliates",
     "class": "inline-block w-full py-2 px-6 rounded-lg text-center transition border-2 border-white text-white hover:text-red-600 hover:bg-red-100 sm:w-max"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_10];
+      return [_hoisted_13];
     }),
     _: 1
     /* STABLE */
@@ -31452,12 +31464,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "inline-block w-full py-2 px-6 rounded-lg text-center transition bg-white active:bg-red-200 hover:bg-red-600 hover:text-white hover:shadow-md focus:bg-red-100 sm:w-max"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_11];
+      return [_hoisted_14];
     }),
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_lottie_player, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_lottie_player, {
     "class": "absolute left-1/2 top-full -translate-x-1/2",
     src: "https://assets1.lottiefiles.com/packages/lf20_jfchliut.json",
     background: "transparent",

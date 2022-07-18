@@ -5,7 +5,7 @@ import SiteLayout from './Website/Layouts/SiteLayout.vue';
 
 let articles = [
 	{
-		id:1,
+		id: 1,
 		title: "Why you should choose DesignGenius SAS as your go-to company for product design and development",
 		image: "/img/dg-team.png",
 		author: "Design Genius",
@@ -38,20 +38,8 @@ Trusting DesignGenius SAS with your product design and development is trusting a
 innovative approach to technology. It's the decision you must make to day to stay relevant in
 your niche`,
 		created_at: new Date().getUTCDay(),
-		tags: [
-			"bestChoice",
-			"productDesign",
-			"designGenius237"
-		]
+		tags: "bestChoice,productDesign,designGenius237",
 	},
-	// {
-	// 	title: "",
-	// 	image: "",
-	// 	author: "",
-	// 	category: "",
-	// 	content: "",
-	// 	created_at: new Date().getUTCDay(),
-	// },
 ]
 
 </script>
@@ -82,25 +70,34 @@ your niche`,
 				<div class="container w-11/12 mx-auto px-6  text-gray-600 md:px-12 xl:px-6">
 
 
-					<div class="w-full flex  flex-col flex-wrap md:flex-row sm:space-y-5 lg:space-y-0 lg:space-x-5 mx-auto">
+					<div
+						class="w-full flex  flex-col flex-wrap md:flex-row sm:space-y-5 lg:space-y-0 lg:space-x-5 mx-auto">
 
 						<div class="group space-y-4 w-11/12  lg:w-5/12 m-5 " v-for="(post, index) in articles"
 							:key="'blog-post-' + index">
+							<Link :href="route('web.blog', post.id)">
+
 							<img :src="post.image" :alt="post.title + ' cover'" loading="lazy"
 								class="h-64 w-full  object-cover object-top rounded-xl transition duration-500 group-hover:rounded-3xl">
+							</Link>
 							<div class="space-y-2">
 								<p class="text-red-500 text-sm font-bold">{{ post.category }}</p>
 								<div class="flex flex-row w-full">
 									<span
 										class=" hover:font-bold text-slate-800 bg-slate-400 bg-opacity-30 rounded-lg p-1  text-xs font-poppins mx-1"
-										v-for="(tag, index) in post.tags" :key="'blog-post-tag-' + index">#{{ tag }}</span>
+										v-for="(tag, index) in post.tags.split(',')" :key="'blog-post-tag-' + index">#{{
+												tag
+										}}</span>
 								</div>
 								<div class="space-y-4">
+									<Link :href="route('web.blog', post.id)">
 									<h4 class="text-lg font-semibold font-poppins text-gray-700">{{ post.title }}</h4>
+									</Link>
 
 								</div>
 							</div>
-							<Link :href="'/blog/content/'+ post.id" class="block w-max text-xs font-poppins text-red-600 hover:font-medium">Read more</Link>
+							<Link :href="route('web.blog', post.id)"
+								class="block w-max text-xs font-poppins text-red-600 hover:font-medium">Read more</Link>
 						</div>
 
 

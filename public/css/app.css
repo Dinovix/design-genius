@@ -1349,6 +1349,9 @@ select {
 .w-64 {
   width: 16rem;
 }
+.w-screen {
+  width: 100vw;
+}
 .w-36 {
   width: 9rem;
 }
@@ -1363,9 +1366,6 @@ select {
 }
 .w-2\/5 {
   width: 40%;
-}
-.w-screen {
-  width: 100vw;
 }
 .min-w-0 {
   min-width: 0px;

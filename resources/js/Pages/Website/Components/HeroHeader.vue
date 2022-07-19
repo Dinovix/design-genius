@@ -24,7 +24,7 @@ import {Link} from '@inertiajs/inertia-vue3';
 							<h1 class="text-white text-center text-3xl font-bold sm:text-4xl  md:text-5xl pb-0 mb-0">
 								We boost competitiveness through high-quality design and manufacturing solutions<br />
 								<span class="text-black  text-center  text-base font-serif leading-none  ">
-									Designing the future...
+									Designing the future.
 								</span>
 							</h1>
 

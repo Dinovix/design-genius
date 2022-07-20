@@ -4,8 +4,11 @@ import {Link} from '@inertiajs/inertia-vue3';
 
 <template>
 	<div class="relative min-h-screen">
+
+<!-- <iframe width="745" height="419" src="https://www.youtube.com/embed/M7nG-ZCc-OQ" title="Digital Fabrication" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
 					<video autoplay loop muted   class="absolute inset-0 w-screen h-screen object-cover object-top" >
-					<source src="https://youtu.be/M7nG-ZCc-OQ" type="video/mp4" />
+					<source src="/vid/df.mp4" type="video/mp4" />
 						<!--  360p -->
 						<!-- <source src="https://vod-progressive.akamaized.net/exp=1658119178~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4656%2F28%2F723284532%2F3355082707.mp4~hmac=2ddba2ab78fc35705eb63a5aacd95c953b99a1e14fc33c1577ec2f255b48503e/vimeo-prod-skyfire-std-us/01/4656/28/723284532/3355082707.mp4" type="video/mp4" /> -->
 						<!-- 720p  -->

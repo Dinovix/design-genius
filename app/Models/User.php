@@ -28,6 +28,13 @@ class User extends Authenticatable
         'last_name',
         'email',
         'password',
+        'profile_photo_path',
+        'country',
+        'town',
+        'gender',
+        'is_admin',
+        'phone',
+        'email_verified_at'
     ];
 
     /**

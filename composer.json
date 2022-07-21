@@ -12,7 +12,9 @@
         "laravel/jetstream": "^2.7",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "league/glide-laravel": "^1.0",
         "protonemedia/inertiajs-tables-laravel-query-builder": "^2.0",
+        "spatie/image": "^2.2",
         "spatie/laravel-query-builder": "^5.0",
         "tightenco/ziggy": "^1.0"
     },

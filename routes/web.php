@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -76,6 +77,10 @@ Route::middleware([
     Route::resource('/admin/users', UserController::class);
     Route::get('/admin/users', [UserController::class, 'index'])->name('users');
 
+    // Images
+    Route::get('/img/{path}', [ImageController::class, 'show'])
+        ->where('path', '.*')
+        ->name('image');
 
 });
 

@@ -20,4 +20,8 @@ class ImageController extends Controller
 
         return $server->getImageResponse($path, $request->all());
     }
+
+    public function delete($path){
+        
+    }
 }

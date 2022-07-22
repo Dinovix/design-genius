@@ -1482,9 +1482,6 @@ select {
 .w-2 {
   width: 0.5rem;
 }
-.w-56 {
-  width: 14rem;
-}
 .w-screen {
   width: 100vw;
 }
@@ -1629,12 +1626,6 @@ select {
 }
 .cursor-default {
   cursor: default;
-}
-.select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 .resize-none {
   resize: none;
@@ -2070,14 +2061,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
-.bg-indigo-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 46 129 / var(--tw-bg-opacity));
-}
-.bg-indigo-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 48 163 / var(--tw-bg-opacity));
-}
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
@@ -2173,9 +2156,6 @@ select {
 }
 .fill-gray-700 {
   fill: #374151;
-}
-.fill-indigo-400 {
-  fill: #818cf8;
 }
 .fill-yellow-800 {
   fill: #854d0e;
@@ -2621,10 +2601,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
 }
-.text-indigo-300 {
-  --tw-text-opacity: 1;
-  color: rgb(165 180 252 / var(--tw-text-opacity));
-}
 .text-yellow-800 {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
@@ -3063,10 +3039,6 @@ nav.scrolled span:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
-.hover\:bg-indigo-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
-}
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -3216,9 +3188,6 @@ nav.scrolled span:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.focus\:fill-indigo-600:focus {
-  fill: #4f46e5;
-}
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -3238,10 +3207,6 @@ nav.scrolled span:hover {
 .focus\:text-red-800:focus {
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
-}
-.focus\:text-indigo-600:focus {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 .focus\:text-indigo-500:focus {
   --tw-text-opacity: 1;
@@ -3381,9 +3346,6 @@ nav.scrolled span:hover {
 .group:hover .group-hover\:fill-white {
   fill: #fff;
 }
-.group:hover .group-hover\:fill-indigo-600 {
-  fill: #4f46e5;
-}
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3391,10 +3353,6 @@ nav.scrolled span:hover {
 .group:hover .group-hover\:text-slate-50 {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
-}
-.group:hover .group-hover\:text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 .group:hover .group-hover\:text-red-600 {
   --tw-text-opacity: 1;
@@ -3842,10 +3800,6 @@ nav.scrolled span:hover {
     display: grid;
   }
 
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:h-80 {
     height: 20rem;
   }
@@ -3856,10 +3810,6 @@ nav.scrolled span:hover {
 
   .md\:h-auto {
     height: auto;
-  }
-
-  .md\:h-screen {
-    height: 100vh;
   }
 
   .md\:w-1\/5 {
@@ -3902,28 +3852,12 @@ nav.scrolled span:hover {
     width: 50%;
   }
 
-  .md\:w-56 {
-    width: 14rem;
-  }
-
   .md\:w-auto {
     width: auto;
   }
 
   .md\:w-9\/12 {
     width: 75%;
-  }
-
-  .md\:flex-1 {
-    flex: 1 1 0%;
-  }
-
-  .md\:flex-shrink-0 {
-    flex-shrink: 0;
-  }
-
-  .md\:flex-grow {
-    flex-grow: 1;
   }
 
   .md\:grid-cols-3 {
@@ -3946,20 +3880,12 @@ nav.scrolled span:hover {
     flex-direction: row-reverse;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
   .md\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
   .md\:justify-end {
     justify-content: flex-end;
-  }
-
-  .md\:justify-center {
-    justify-content: center;
   }
 
   .md\:gap-6 {
@@ -3983,14 +3909,6 @@ nav.scrolled span:hover {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:overflow-hidden {
-    overflow: hidden;
-  }
-
-  .md\:overflow-y-auto {
-    overflow-y: auto;
   }
 
   .md\:overflow-x-hidden {
@@ -4057,14 +3975,14 @@ nav.scrolled span:hover {
     padding-bottom: 1.5rem;
   }
 
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:px-3 {

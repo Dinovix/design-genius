@@ -158,9 +158,14 @@ class UserController extends Controller
         $user->update(Request::only('first_name', 'last_name', 'email', 'is_admin', 'gender', 'country', 'town', 'phone'));
 
         if (Request::file('photo')) {
-            $old_image_path = $user->profile_photo_path;  
+            $old_image_path = $user->profile_photo_path; 
+            try {
+                $res = Storage::delete($old_image_path);
+            } catch (\Throwable $th) {
+                //throw $th;
+                // TODO : Logs errors
+            } 
             $user->update(['profile_photo_path' => Request::file('photo')->store('users')]);
-            // TODO : Delete the old image | create a global function 
         }
 
         if (Request::get('password')) {
@@ -183,7 +188,12 @@ class UserController extends Controller
             return Redirect::back()->with('error', 'Deleting is not allowed.');
         }
 
-        // TODO : Delete Profile Image  
+        try {
+            $res = Storage::delete($user->profile_photo_path);
+        } catch (\Throwable $th) {
+            //throw $th;
+            // TODO : Logs errors
+        } 
         $user->delete();
 
         return Redirect::route('users')->with('success', 'User deleted.');

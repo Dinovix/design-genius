@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
 			$table->string('affiliation_code')->nullable();
             $table->ipAddress('ip_address')->nullable();
+            $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });
     }

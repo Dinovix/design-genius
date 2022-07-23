@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Discount;
+use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,7 +18,6 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Category::class);
-            $table->foreignIdFor(Discount::class);
             $table->string('name');
             $table->decimal('sale_price');
             $table->boolean('is_rentable')->default(false);
@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('features')->default("[]"); // string array of product's features
             $table->double('quantity')->nullable();
             $table->boolean('unlimited')->default(false);
+			$table->boolean("customizable")->default(false);
             $table->string('location')->nullable();
             $table->string('thumbnail')->nullable();
             $table->boolean('active')->default(true);

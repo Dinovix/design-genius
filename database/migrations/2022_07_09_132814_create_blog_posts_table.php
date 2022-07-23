@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('banner')->nullable();
             $table->string('content');
-			$table->string('tags')->nullable();
+			$table->string('tags')->nullable();//comma seperated list
 			$table->integer('likes')->default(0);
             $table->timestamps();
         });

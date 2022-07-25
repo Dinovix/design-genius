@@ -1088,6 +1088,10 @@ select {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1169,6 +1173,15 @@ select {
 .mb-3 {
   margin-bottom: 0.75rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mr-0 {
+  margin-right: 0px;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1181,17 +1194,8 @@ select {
 .mb-0 {
   margin-bottom: 0px;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .ml-auto {
   margin-left: auto;
-}
-.mt-12 {
-  margin-top: 3rem;
-}
-.mr-0 {
-  margin-right: 0px;
 }
 .mt-auto {
   margin-top: auto;
@@ -1256,11 +1260,11 @@ select {
 .h-auto {
   height: auto;
 }
-.h-64 {
-  height: 16rem;
-}
 .h-48 {
   height: 12rem;
+}
+.h-64 {
+  height: 16rem;
 }
 .h-56 {
   height: 14rem;
@@ -1284,6 +1288,12 @@ select {
 }
 .h-0 {
   height: 0px;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.h-40 {
+  height: 10rem;
 }
 .max-h-max {
   max-height: -webkit-max-content;
@@ -1366,6 +1376,9 @@ select {
 }
 .w-2\/5 {
   width: 40%;
+}
+.w-10\/12 {
+  width: 83.333333%;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1765,6 +1778,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
+.border-slate-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(15 23 42 / var(--tw-border-opacity));
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1972,6 +1989,9 @@ select {
 .p-4 {
   padding: 1rem;
 }
+.p-12 {
+  padding: 3rem;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -1983,9 +2003,6 @@ select {
 }
 .p-8 {
   padding: 2rem;
-}
-.p-12 {
-  padding: 3rem;
 }
 .p-0 {
   padding: 0px;
@@ -2054,13 +2071,13 @@ select {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-1\.5 {
   padding-top: 0.375rem;
@@ -2110,6 +2127,9 @@ select {
 .pt-24 {
   padding-top: 6rem;
 }
+.pt-40 {
+  padding-top: 10rem;
+}
 .pt-16 {
   padding-top: 4rem;
 }
@@ -2121,9 +2141,6 @@ select {
 }
 .pt-0 {
   padding-top: 0px;
-}
-.pt-40 {
-  padding-top: 10rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -3253,12 +3270,16 @@ nav.scrolled span:hover {
     margin-bottom: 2rem;
   }
 
-  .md\:ml-5 {
-    margin-left: 1.25rem;
-  }
-
   .md\:mr-auto {
     margin-right: auto;
+  }
+
+  .md\:-mr-24 {
+    margin-right: -6rem;
+  }
+
+  .md\:ml-5 {
+    margin-left: 1.25rem;
   }
 
   .md\:mb-10 {
@@ -3267,10 +3288,6 @@ nav.scrolled span:hover {
 
   .md\:mb-16 {
     margin-bottom: 4rem;
-  }
-
-  .md\:-mr-24 {
-    margin-right: -6rem;
   }
 
   .md\:mb-0 {
@@ -3293,6 +3310,10 @@ nav.scrolled span:hover {
     display: grid;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:h-80 {
     height: 20rem;
   }
@@ -3301,16 +3322,16 @@ nav.scrolled span:hover {
     height: 6rem;
   }
 
-  .md\:h-auto {
-    height: auto;
-  }
-
   .md\:w-1\/5 {
     width: 20%;
   }
 
   .md\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .md\:w-6\/12 {
+    width: 50%;
   }
 
   .md\:w-11\/12 {
@@ -3327,10 +3348,6 @@ nav.scrolled span:hover {
 
   .md\:w-24 {
     width: 6rem;
-  }
-
-  .md\:w-6\/12 {
-    width: 50%;
   }
 
   .md\:w-5\/12 {
@@ -3351,6 +3368,10 @@ nav.scrolled span:hover {
 
   .md\:w-9\/12 {
     width: 75%;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .md\:grid-cols-3 {
@@ -3542,16 +3563,20 @@ nav.scrolled span:hover {
     margin-right: auto;
   }
 
-  .lg\:mb-3 {
-    margin-bottom: 0.75rem;
-  }
-
   .lg\:mr-0 {
     margin-right: 0px;
   }
 
   .lg\:-mt-12 {
     margin-top: -3rem;
+  }
+
+  .lg\:mb-3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:block {
@@ -3725,6 +3750,11 @@ nav.scrolled span:hover {
     padding-right: 1.5rem;
   }
 
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .lg\:pb-12 {
     padding-bottom: 3rem;
   }
@@ -3777,6 +3807,10 @@ nav.scrolled span:hover {
 }
 @media (min-width: 1280px) {
 
+  .xl\:w-1\/4 {
+    width: 25%;
+  }
+
   .xl\:max-w-5xl {
     max-width: 64rem;
   }
@@ -3793,14 +3827,14 @@ nav.scrolled span:hover {
     gap: 4rem;
   }
 
-  .xl\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .xl\:text-5xl {

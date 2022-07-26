@@ -27,11 +27,12 @@ class ProductController extends Controller
     public function index()
     {
         InertiaTable::updateQueryBuilderParameters('products');
-
-        $products = QueryBuilder::for(Product::query())
+        $products = QueryBuilder::for(Product::class)
+            ->allowedFields(['category.name'])
+            ->with(['category','discount'])
             ->defaultSort('name')
-            ->allowedSorts(['name', 'sale_price', 'short_description', 'quantity', 'active', 'created_at'])
-            ->allowedFilters(['name', 'sale_price', 'short_description', 'quantity', 'active', 'created_at'])
+            ->allowedSorts(['category.name', 'name', 'sale_price', 'short_description', 'quantity', 'active', 'created_at'])
+            ->allowedFilters(['category.name', 'name', 'sale_price', 'short_description', 'quantity', 'active', 'created_at'])
             ->paginate(pageName: 'productsPage')
             ->withQueryString();
 
@@ -43,6 +44,8 @@ class ProductController extends Controller
                 ->pageName('productsPage')
                 ->defaultSort('name')
                 ->column(key: 'name', searchable: true, sortable: true)
+                // TODO : add category name column 
+                // ->column(key: 'category.name', searchable: true, sortable: true)
                 ->column(key: 'sale_price', searchable: true, sortable: true)
                 ->column(key: 'short_description', searchable: true)
                 ->column(key: 'quantity', searchable: true, sortable: true)
@@ -135,8 +138,13 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $categories = Category::all(); 
+        $discounts = Discount::all(); 
         return Inertia::render('Admin/Products/Edit', [
+            'categories' => $categories,
+            'discounts' => $discounts,
             'product' => [
+                'id' => $product->id,
                 'name' => $product->name,
                 'category_id' => $product->category_id,
                 'discount_id' => $product->discount_id,

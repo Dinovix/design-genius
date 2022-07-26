@@ -152,8 +152,8 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Is Visible"
 									>
-										<option :value="false">No</option>
-										<option :value="true">Yes</option>
+										<option value="NOT VISIBLE">No</option>
+										<option value="VISIBLE">Yes</option>
 									</select-input>
 									<file-input
 										v-model="form.thumbnail"
@@ -215,6 +215,8 @@ export default {
 	},
 	props: {
 		product: Object,
+		categories: Object,
+		discounts: Object
 	},
 	remember: "form",
 	data() {
@@ -253,7 +255,7 @@ export default {
 		},
 		restore() {
 			if (confirm("Are you sure you want to restore this product?")) {
-				this.$inertia.put(`/products/${this.product.id}/restore`);
+				this.$inertia.put(`/admin/products/${this.product.id}/restore`);
 			}
 		},
 	},

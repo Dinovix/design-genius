@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
@@ -81,6 +82,10 @@ Route::middleware([
     // Products Categories
     Route::resource('/admin/categories', CategoryController::class);
     Route::get('/admin/categories', [CategoryController::class, 'index'])->name('categories');
+
+    // Products
+    Route::resource('/admin/products', ProductController::class);
+    Route::get('/admin/products', [ProductController::class, 'index'])->name('products');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

@@ -18,7 +18,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Category::class);
-            $table->foreignIdFor(Discount::class);
+            $table->foreignIdFor(Discount::class)->nullable();
             $table->string('name');
             $table->decimal('sale_price');
             $table->boolean('is_rentable')->default(false);

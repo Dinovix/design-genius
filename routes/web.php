@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -86,6 +87,10 @@ Route::middleware([
     // Products
     Route::resource('/admin/products', ProductController::class);
     Route::get('/admin/products', [ProductController::class, 'index'])->name('products');
+
+    // Discount 
+    Route::resource('/admin/discounts', DiscountController::class);
+    Route::get('/admin/discounts', [DiscountController::class, 'index'])->name('discounts');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

@@ -152,8 +152,8 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Is Visible"
 									>
-										<option value="NOT VISIBLE">No</option>
-										<option value="VISIBLE">Yes</option>
+										<option value="0">No</option>
+										<option value="1">Yes</option>
 									</select-input>
 									<file-input
 										v-model="form.thumbnail"

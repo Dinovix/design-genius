@@ -63,6 +63,11 @@ Route::get('/about', function () {
     ]);
 })->name("web.about");
 
+Route::get('/profile', function () {
+    return Inertia::render('Profile', [
+    ]);
+})->name("web.profile");
+
 /**
  *  !Website Routes
  */
@@ -73,6 +78,10 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/admin/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/admin', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 

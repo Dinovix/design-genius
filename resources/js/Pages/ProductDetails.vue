@@ -130,9 +130,15 @@ const get_final_rent_price = (product) => {
 
 								</div>
 
-								<div class="lg:col-span-4 bg-gray-100 rounded-lg overflow-hidden relative">
+								<div class="lg:col-span-4 bg-gray-100 rounded-lg overflow-hidden relative group">
 									<img :src="product.image" loading="lazy" :alt="product.name"
 										class="w-full h-full object-cover object-center" />
+
+										<a v-on:click="product_details(product,  [ 'affiliation_code'])"  class="lg:hidden cursor-pointer group-hover:block p-3 duration-200 rounded-full bg-white bg-opacity-90  text-slate-800 hover:text-white hover:bg-red-700 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+										</svg>
+									</a>
 
 									<span
 										class="bg-red-500 text-white text-sm tracking-wider uppercase rounded-br-lg absolute left-0 top-0 px-3 py-1.5">sale</span>

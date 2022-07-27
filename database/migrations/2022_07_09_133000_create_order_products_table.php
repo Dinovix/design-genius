@@ -20,7 +20,9 @@ return new class extends Migration
 			$table->foreignIdFor(Product::class);
 			$table->foreignIdFor(Order::class);
             $table->double('quantity');
-            $table->decimal('price');
+            $table->decimal('discount_amount', 20, 2)->default(0);
+            $table->decimal('price', 20, 2);
+            $table->string('type')->default('SALE'); // or RENT for rent 
             $table->timestamps();
         });
     }

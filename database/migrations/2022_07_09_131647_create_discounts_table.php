@@ -23,7 +23,6 @@ return new class extends Migration
 			$table->boolean('is_for_rent')->default(false);
             $table->boolean('active')->default(false);
             $table->date('exp_date');
-			$table->foreignIdFor(Product::class);
             $table->timestamps();
         });
     }

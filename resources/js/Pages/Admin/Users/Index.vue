@@ -19,13 +19,16 @@ defineProps(["users"]);
 				<div
 					class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5"
 				>
+                <div class="flex items-right mb-6">
+					<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/users/create`"> Create User </a>
+                </div>
 						<Table
 							:resource="users"
 							name="users"
 							preserve-scroll="table-top"
 						>
 							<template #cell(actions)="{ item: user }">
-								<a :href="`/users/${user.id}/edit`"> Edit </a>
+								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/users/${user.id}/edit`"> Edit </a>
 							</template>
 						</Table>
 				</div>

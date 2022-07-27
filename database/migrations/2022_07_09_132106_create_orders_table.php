@@ -17,9 +17,12 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
+            $table->decimal('total_discount');
+            $table->decimal('promo_code');
 			$table->unsignedBigInteger('sponsored_by')->nullable();
 			$table->foreign('sponsored_by')->references('id')->on('users');
-            $table->decimal('total_price');
+            $table->decimal('total_price', 20, 2);
+            $table->string('description')->nullable();
             $table->string('delivery_address')->nullable();
             $table->string('po_box')->nullable();
             $table->string('city')->nullable();

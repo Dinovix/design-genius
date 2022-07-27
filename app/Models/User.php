@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -24,10 +25,18 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        '*',
         'first_name',
         'last_name',
         'email',
         'password',
+        'profile_photo_path',
+        'country',
+        'town',
+        'gender',
+        'is_admin',
+        'phone',
+        'email_verified_at'
     ];
 
     /**
@@ -49,6 +58,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'created_at' => 'datetime:Y-m-d H:i:s'
     ];
 
     /**
@@ -59,4 +69,23 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+	/**
+	 *  Collection of payments done by  a given user
+	 *
+	 * @return HasMany
+	 */
+	public function payment_details(): HasMany
+	{
+		return $this->hasMany(PaymentDetail::class);
+	}
+
+	 /**
+     *  Collection of logs related to a given user
+     *
+     * @author Kapol brondon <kapolw@gmail.com> | @KadonWills
+     */
+    public function logs(): HasMany{
+        return $this->hasMany(Log::class);
+    }
 }

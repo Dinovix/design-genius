@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class PaymentDetail extends Model
 {
     use HasFactory;
+
+
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
+
+	public function order()
+	{
+		return $this->hasOne(Order::class);
+	}
+
+
 }

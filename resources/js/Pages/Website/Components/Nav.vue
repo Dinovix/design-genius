@@ -71,12 +71,25 @@ const props = defineProps({
 
 								</li>
 								<li>
-									<Link :href="affiliates" class="text-sm text-white font-semibold block md:px-3">
+									<Link :href="route('web.affiliates')" class="text-sm text-white font-semibold block md:px-3">
 									Affiliates
 									</Link>
 
 								</li>
 
+								<li>
+									<Link :href="route('web.about')" class="text-sm text-white font-semibold block md:px-3">
+									About us
+									</Link>
+
+								</li>
+
+								<li>
+									<Link :href="route('web.contact')" class="text-sm text-white font-semibold block md:px-3">
+									Contact  us
+									</Link>
+
+								</li>
 							</ul>
 
 							<ul

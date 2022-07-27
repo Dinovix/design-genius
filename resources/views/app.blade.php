@@ -28,5 +28,6 @@
             <script src="http://localhost:3000/browser-sync/browser-sync-client.js"></script>
         @endenv
 		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<script src="https://player.vimeo.com/api/player.js"></script>
     </body>
 </html>

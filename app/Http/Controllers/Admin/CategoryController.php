@@ -23,7 +23,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        InertiaTable::updateQueryBuilderParameters('users');
+        InertiaTable::updateQueryBuilderParameters('categories');
 
         $categories = QueryBuilder::for(Category::query())
             ->defaultSort('name')

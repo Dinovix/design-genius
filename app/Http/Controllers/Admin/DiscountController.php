@@ -24,7 +24,7 @@ class DiscountController extends Controller
      */
     public function index()
     {
-        InertiaTable::updateQueryBuilderParameters('discount');
+        InertiaTable::updateQueryBuilderParameters('discounts');
 
         $discounts = QueryBuilder::for(Discount::query())
             ->defaultSort('name')

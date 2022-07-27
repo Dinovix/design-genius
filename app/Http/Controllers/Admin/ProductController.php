@@ -82,7 +82,7 @@ class ProductController extends Controller
             "name" => ['required', 'max:50', Rule::unique('products')],
             "category_id" => ['required'],
             "discount_id" => ['nullable'],
-            "sale_price" => ['required', 'numeric'],
+            "sale_price" => ['required', 'numeric', 'between:1,999999999999999.99'],
             "is_rentable" => ['required'],
             "rent_price" => [ Request::get('is_rentable') ? 'required' : 'nullable', 'numeric' ],
             "weight" => ['nullable', 'numeric'],
@@ -91,7 +91,7 @@ class ProductController extends Controller
             "short_description" => ['required'],
             "long_description" => ['nullable'],
             "features" => ['nullable'],
-            "quantity" => ['nullable', 'numeric'],
+            "quantity" => ['nullable', 'integer', 'between:0,1000'],
             "location" => ['required'],
             "active" => ['required'],
             "thumbnail" => ['required', 'image'],
@@ -179,7 +179,7 @@ class ProductController extends Controller
             "name" => ['required', 'max:50', Rule::unique('products')],
             "category_id" => ['required'],
             "discount_id" => ['nullable'],
-            "sale_price" => ['required', 'numeric'],
+            "sale_price" => ['required', 'numeric', 'between:1,999999999999999.99'],
             "is_rentable" => ['required'],
             "rent_price" => [ Request::get('is_rentable') ? 'required' : 'nullable', 'numeric' ],
             "weight" => ['nullable', 'numeric'],
@@ -188,7 +188,7 @@ class ProductController extends Controller
             "short_description" => ['required'],
             "long_description" => ['nullable'],
             "features" => ['nullable'],
-            "quantity" => ['nullable', 'numeric'],
+            "quantity" => ['nullable', 'integer', 'between:0,1000'],
             "location" => ['required'],
             "active" => ['required'],
             "thumbnail" => ['image'],
@@ -206,6 +206,8 @@ class ProductController extends Controller
             } 
             $product->update(['thumbnail' => Request::file('thumbnail')->store('products')]);
         }
+
+        return Redirect::back()->with('success', 'Product updated.');
     }
 
     /**

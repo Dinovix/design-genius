@@ -109,12 +109,7 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Available Colors"
 									/>
-                                    <textarea-input
-										v-model="form.cart_description"
-										:error="form.errors.cart_description"
-										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Cart Description"
-									/>
+                                    
                                     <textarea-input
 										v-model="form.short_description"
 										:error="form.errors.short_description"

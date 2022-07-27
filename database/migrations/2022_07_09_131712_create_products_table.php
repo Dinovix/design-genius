@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignIdFor(Category::class);
             $table->foreignIdFor(Discount::class)->nullable();
             $table->string('name');
-            $table->decimal('sale_price');
+            $table->decimal('sale_price', 20, 2);
             $table->boolean('is_rentable')->default(false);
             $table->decimal('rent_price')->default(0.0);
             $table->decimal('weight')->nullable();

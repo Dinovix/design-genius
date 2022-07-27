@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DiscountController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -91,6 +92,10 @@ Route::middleware([
     // Discount 
     Route::resource('/admin/discounts', DiscountController::class);
     Route::get('/admin/discounts', [DiscountController::class, 'index'])->name('discounts');
+
+    // Orders
+    Route::resource('/admin/orders', OrderController::class);
+    Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

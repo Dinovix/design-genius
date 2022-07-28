@@ -23,11 +23,11 @@ defineProps(["categories", "discounts"]);
 						<Head title="Create Products" />
 						<h1 class="mb-8 text-3xl font-bold">
 							<Link
-								class="text-indigo-400 hover:text-indigo-600"
+								class="text-slate-400 hover:text-slate-600"
 								href="/admin/products"
 								>Products</Link
 							>
-							<span class="text-indigo-400 font-medium">/</span>
+							<span class="text-slate-400 font-medium">/</span>
 							Create
 						</h1>
 						<div
@@ -47,8 +47,8 @@ defineProps(["categories", "discounts"]);
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Product Category"
 									>
-										<option :value="null" />
-										<option v-for="category in categories" :value="category.id">{{ category.name }}</option>
+										<option :value="null" ></option>
+										<option v-for="category in categories" :value="category.id" v-bind:key="category.id+'-cat'">{{ category.name }}</option>
 									</select-input>
                                     <select-input
 										v-model="form.discount_id"
@@ -56,8 +56,8 @@ defineProps(["categories", "discounts"]);
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Discount"
 									>
-										<option :value="null" />
-										<option v-for="discount in discounts" :value="discount.id">{{ discount.name }}</option>
+										<option :value="null" ></option>
+										<option v-for="discount in discounts" :value="discount.id" v-bind:key="discount.id+'-cat'">{{ discount.name }}</option>
 									</select-input>
 									<text-input
 										v-model="form.sale_price"
@@ -156,7 +156,7 @@ defineProps(["categories", "discounts"]);
 								>
 									<loading-button
 										:loading="form.processing"
-										class="btn-indigo"
+										class="btn-slate"
 										type="submit"
 										>Create Product</loading-button
 									>

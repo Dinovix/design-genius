@@ -20,11 +20,11 @@
 						<div class="flex justify-start mb-8 max-w-3xl">
 							<h1 class="text-3xl font-bold">
 								<Link
-									class="text-indigo-400 hover:text-indigo-600"
+									class="text-slate-400 hover:text-slate-600"
 									href="/admin/products"
 									>Products</Link
 								>
-								<span class="text-indigo-400 font-medium"
+								<span class="text-slate-400 font-medium"
 									>/</span
 								>
 								{{ form.name }}
@@ -47,7 +47,7 @@
 						>
 							<form @submit.prevent="update">
 								<div class="flex flex-wrap -mb-8 -mr-6 p-8">
-                                    
+
 									<text-input
 										v-model="form.name"
 										:error="form.errors.name"
@@ -60,8 +60,8 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Product Category"
 									>
-										<option :value="null" />
-										<option v-for="category in categories" :value="category.id">{{ category.name }}</option>
+										<option :value="null" ></option>
+										<option v-for="category in categories" :value="category.id" v-bind:key="category.id+'-cat'">{{ category.name }}</option>
 									</select-input>
                                     <select-input
 										v-model="form.discount_id"
@@ -69,8 +69,8 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Discount"
 									>
-										<option :value="null" />
-										<option v-for="discount in discounts" :value="discount.id">{{ discount.name }}</option>
+										<option :value="null" ></option>
+										<option v-for="discount in discounts" :value="discount.id" v-bind:key="discount.id+'-cat'">{{ discount.name }}</option>
 									</select-input>
 									<text-input
 										v-model="form.sale_price"
@@ -109,7 +109,7 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Available Colors"
 									/>
-                                    
+
                                     <textarea-input
 										v-model="form.short_description"
 										:error="form.errors.short_description"
@@ -158,7 +158,7 @@
 										accept="image/*"
 										label="Product Image"
 									/>
-								
+
                                 </div>
 								<div
 									class="flex items-center px-8 py-4 bg-gray-50 border-t border-gray-100"
@@ -174,7 +174,7 @@
 									</button>
 									<loading-button
 										:loading="form.processing"
-										class="btn-indigo ml-auto"
+										class="btn-slate ml-auto"
 										type="submit"
 										>Update Product</loading-button
 									>

@@ -36,7 +36,7 @@ return new class extends Migration
             $table->string('thumbnail')->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
-            $table->comment("List of products");
+            // $table->comment("List of products");
         });
     }
 

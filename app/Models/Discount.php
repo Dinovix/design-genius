@@ -14,4 +14,9 @@ class Discount extends Model
 	{
 		$this->belongsTo(Product::class);
 	}
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s'
+    ]; 
+
+    protected $guarded = []; 
 }

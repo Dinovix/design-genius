@@ -19,4 +19,13 @@ class Order extends Model
 	{
 		return $this->hasOne(PaymentDetail::class);
 	}
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s'
+    ];
+
+    protected $guarded = ['phone', 'po_box', 'city', 'delivery_address', 'paid', 'shipped'];
+
+    public function order_products(){
+        return $this->hasMany('App\Models\OrderProduct');
+    }
 }

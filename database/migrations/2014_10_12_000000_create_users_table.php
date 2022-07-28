@@ -24,13 +24,13 @@ return new class extends Migration
 			$table->string('country')->nullable();
 			$table->string('town')->nullable();
 			$table->string('phone')->nullable();
-            $table->rememberToken();
+			$table->boolean('is_admin')->default(false);
+            $table->boolean('is_premium')->default(false);
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
 			$table->string('affiliation_code')->nullable();
             $table->ipAddress('ip_address')->nullable();
-            $table->boolean('is_admin')->default(false);
-            $table->boolean('is_premium')->default(false);
+            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -20,10 +20,20 @@ const product_details = (product, ...rest) => {
 	);
 }
 
+const props = defineProps({
+	products: []
+});
+
+
+// fetch('webapi/product').then((raw) => raw.json()).then(data => {
+// 	products.fill(data);
+// })
 
 
 
-const products = [
+
+// const products = (props?.products.length > 0) ? props?.products : [
+const products =  [
 	{
 		id: 1,
 		name : "360° Video Booth",
@@ -70,7 +80,7 @@ const products = [
 ];
 
 
-	const affiliation_code = ( $page.props.auth.user ) ? $page.props.auth.user.affiliation_code : null;
+	let affiliation_code = null; // ( $page.props.auth.user ) ? $page.props.auth.user.affiliation_code : null;
 
 </script>
 

@@ -14,4 +14,9 @@ class Category extends Model
 	{
 		return $this->hasMany(Product::class);
 	}
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s'
+    ]; 
+
+    protected $guarded = [];
 }

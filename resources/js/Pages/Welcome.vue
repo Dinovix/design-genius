@@ -11,7 +11,7 @@ import Testimonials from '@/Pages/Website/Components/Testimonials.vue';
 
 <template>
 
-	<SiteLayout title="Home">
+	<SiteLayout  title="Home">
 
 		<template #banner>
 			<HeroHeader />

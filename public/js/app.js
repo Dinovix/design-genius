@@ -42387,7 +42387,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
       }, 8
       /* PROPS */
-      , ["href"]), _hoisted_30]), _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\r\n\t\t\t<video autoplay loop muted class=\"w-full hidden\">\r\n\t\t\t\t\t\t<source src=\"/vid/booth.mp4\" type=\"video/mp4\" />\r\n\t\t\t\t\t\tYour browser does not support the video tag.\r\n\t\t\t</video> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+      , ["href"]), _hoisted_30]), _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n\t\t\t<video autoplay loop muted class=\"w-full hidden\">\n\t\t\t\t\t\t<source src=\"/vid/booth.mp4\" type=\"video/mp4\" />\n\t\t\t\t\t\tYour browser does not support the video tag.\n\t\t\t</video> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
         href: "/contact",
         "class": "px-4 py-2 max-h-max cursor-pointer text-white bg-red-600 hover:bg-slate-800 rounded-lg"
       }, {
@@ -43103,7 +43103,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-booth[data-v-317d1a6e]{\r\n\tbackground-image: url(\"https://onephotobooth.com/wp-content/uploads/2021/12/360-header-photo-1024x683-1.jpg\");\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bg-booth[data-v-317d1a6e]{\n\tbackground-image: url(\"https://onephotobooth.com/wp-content/uploads/2021/12/360-header-photo-1024x683-1.jpg\");\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

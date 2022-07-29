@@ -29,7 +29,7 @@ defineProps(["logs"]);
 							preserve-scroll="table-top"
 						>
 							<template #cell(actions)="{ item: log }">
-								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/logs/${log.id}/edit`"> Edit </a>
+								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/logs/${log.id}/edit`"> Show </a>
 							</template>
 						</Table>
 				</div>

@@ -29,7 +29,7 @@ defineProps(["contacts"]);
 							preserve-scroll="table-top"
 						>
 							<template #cell(actions)="{ item: contact }">
-								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/contacts/${contact.id}/edit`"> Edit </a>
+								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/contacts/${contact.id}/edit`"> Show </a>
 							</template>
 						</Table>
 				</div>

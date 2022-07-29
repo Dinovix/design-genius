@@ -99,7 +99,7 @@ class LogController extends Controller
         return Inertia::render('Admin/Logs/Edit', [
             'log' => array_merge($log->toArray(), 
                 [ 
-                    'full_name' => $user->first_tname . ' ' . $user->last_name ,
+                    'full_name' => $user->first_name . ' ' . $user->last_name ,
                     'email' => $user->email
                 ])
         ]);

@@ -128,14 +128,6 @@ class AdvertController extends Controller
             'image' => ['nullable', 'image'],
         ]);
 
-        Advert::create([
-            'title' => Request::get('title'),
-            'description' => Request::get('description'),
-            'url' => Request::get('url'),
-            'active' => Request::get('active'),
-            'image' => Request::file('image') ? Request::file('image')->store('adverts') : null,
-        ]);
-
         $advert->update(Request::only('title', 'description', 'url', 'active'));
 
         if (Request::file('image')) {

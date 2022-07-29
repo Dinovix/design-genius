@@ -36782,7 +36782,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
             "class": "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
             href: "/admin/contacts/".concat(contact.id, "/edit")
-          }, " Edit ", 8
+          }, " Show ", 8
           /* PROPS */
           , _hoisted_5)];
         }),
@@ -37514,7 +37514,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
             "class": "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
             href: "/admin/logs/".concat(log.id, "/edit")
-          }, " Edit ", 8
+          }, " Show ", 8
           /* PROPS */
           , _hoisted_5)];
         }),

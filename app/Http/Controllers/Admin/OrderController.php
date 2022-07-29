@@ -35,7 +35,7 @@ class OrderController extends Controller
             ->select('orders.id', 'orders.total_price',
             DB::raw("concat(users.last_name, ' ', users.first_name) as full_name"),
             'orders.paid', 'orders.shipped', 'orders.created_at', 'users.email')
-            ->join('users', 'orders.id', '=', 'users.id')
+            ->join('users', 'orders.user_id', '=', 'users.id')
             ->allowedSorts(['full_name', 'total_price', 'paid', 'shipped', 'email', 'created_at'])
             ->allowedFilters(['full_name', 'total_price', 'paid', 'shipped', 'email', 'created_at'])
             ->paginate(pageName: 'ordersPage')

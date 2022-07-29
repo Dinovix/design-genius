@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdvertController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
@@ -96,6 +98,14 @@ Route::middleware([
     // Orders
     Route::resource('/admin/orders', OrderController::class);
     Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders');
+
+    // Adverts
+    Route::resource('/admin/adverts', AdvertController::class);
+    Route::get('/admin/adverts', [AdvertController::class, 'index'])->name('adverts');
+    
+    // BlogPosts
+    Route::resource('/admin/blogposts', BlogController::class);
+    Route::get('/admin/blogposts', [BlogController::class, 'index'])->name('blogposts');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

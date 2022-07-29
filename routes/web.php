@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\AdvertController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\LogController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -82,6 +86,11 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
+    /**
+     * Admin resources administration routes 
+     */
+
+    // users 
 	Route::get('/admin', function () {
         return Inertia::render('Dashboard');
     })->name('admin');
@@ -105,6 +114,22 @@ Route::middleware([
     // Orders
     Route::resource('/admin/orders', OrderController::class);
     Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders');
+
+    // Adverts
+    Route::resource('/admin/adverts', AdvertController::class);
+    Route::get('/admin/adverts', [AdvertController::class, 'index'])->name('adverts');
+    
+    // BlogPosts
+    Route::resource('/admin/blogposts', BlogController::class);
+    Route::get('/admin/blogposts', [BlogController::class, 'index'])->name('blogposts');
+    
+    // Contacts
+    Route::resource('/admin/contacts', ContactController::class);
+    Route::get('/admin/contacts', [ContactController::class, 'index'])->name('contacts');
+    
+    // Admin Logs
+    Route::resource('/admin/logs', LogController::class);
+    Route::get('/admin/logs', [LogController::class, 'index'])->name('logs');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

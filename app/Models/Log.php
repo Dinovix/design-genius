@@ -9,9 +9,14 @@ class Log extends Model
 {
     use HasFactory;
 
-
 	public function user()
 	{
 		return $this->belongsTo(User::class);
 	}
+
+	protected $guarded = [];
+
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s'
+    ];
 }

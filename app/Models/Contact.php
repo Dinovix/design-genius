@@ -10,4 +10,9 @@ class Contact extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s'
+    ];
+    
 }

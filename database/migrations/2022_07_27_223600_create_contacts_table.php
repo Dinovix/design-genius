@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('contact');
             $table->string('description');
+            $table->boolean('is_viewed')->default(false);
             $table->timestamps();
         });
     }

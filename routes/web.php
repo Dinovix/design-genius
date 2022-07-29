@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\LogController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -79,6 +81,10 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
+    /**
+     * Admin resources administration routes 
+     */
+
     // users 
     Route::resource('/admin/users', UserController::class);
     Route::get('/admin/users', [UserController::class, 'index'])->name('users');
@@ -106,6 +112,14 @@ Route::middleware([
     // BlogPosts
     Route::resource('/admin/blogposts', BlogController::class);
     Route::get('/admin/blogposts', [BlogController::class, 'index'])->name('blogposts');
+    
+    // Contacts
+    Route::resource('/admin/contacts', ContactController::class);
+    Route::get('/admin/contacts', [ContactController::class, 'index'])->name('contacts');
+    
+    // Admin Logs
+    Route::resource('/admin/logs', LogController::class);
+    Route::get('/admin/logs', [LogController::class, 'index'])->name('logs');
 
     // Images
     Route::get('/img/{path}', [ImageController::class, 'show'])

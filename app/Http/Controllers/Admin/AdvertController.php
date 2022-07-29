@@ -170,6 +170,6 @@ class AdvertController extends Controller
         }
         $advert->delete();
 
-        return Redirect::route('advert')->with('success', 'Advert deleted.');
+        return Redirect::route('adverts')->with('success', 'Advert deleted.');
     }
 }

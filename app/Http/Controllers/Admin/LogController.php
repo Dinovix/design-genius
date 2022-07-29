@@ -32,7 +32,7 @@ class LogController extends Controller
             ->allowedIncludes(['user'])
             ->select('logs.id', 'logs.title',
             DB::raw("concat(users.last_name, ' ', users.first_name) as full_name"),
-            'logs.description', 'logs.created_at', 'logs.email')
+            'logs.description', 'logs.created_at', 'users.email')
             ->join('users', 'logs.user_id', '=', 'users.id')
             ->allowedSorts(['full_name', 'title', 'email', 'created_at'])
             ->allowedFilters(['full_name', 'title', 'email', 'created_at'])
@@ -94,8 +94,14 @@ class LogController extends Controller
      */
     public function edit(Log $log)
     {
+        $log = $log->with(['user'])->where('id', $log->id)->first();
+        $user = $log->user;
         return Inertia::render('Admin/Logs/Edit', [
-            'log' => $log->toArray()
+            'log' => array_merge($log->toArray(), 
+                [ 
+                    'full_name' => $user->first_tname . ' ' . $user->last_name ,
+                    'email' => $user->email
+                ])
         ]);
     }
 

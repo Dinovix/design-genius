@@ -3,15 +3,15 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 
 import { Table } from "@protonemedia/inertiajs-tables-laravel-query-builder";
 
-defineProps(["blogposts"]);
+defineProps(["contacts"]);
 
 </script>
 
 <template>
-	<AppLayout title="Blog Posts Management">
+	<AppLayout title="Contacts Management">
 		<template #header>
 			<h2 class="font-semibold text-xl text-gray-800 leading-tight">
-				Blog Posts Management
+				Contacts Management
 			</h2>
 		</template>
 
@@ -20,16 +20,16 @@ defineProps(["blogposts"]);
 				<div
 					class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5"
 				>
-                <div class="flex items-right mb-6">
-					<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/blogposts/create`"> Create Blog Posts </a>
-                </div>
+                <!-- <div class="flex items-right mb-6">
+					<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/contacts/create`"> Create Contacts </a>
+                </div> -->
 						<Table
-							:resource="blogposts"
-							name="blogposts"
+							:resource="contacts"
+							name="contacts"
 							preserve-scroll="table-top"
 						>
-							<template #cell(actions)="{ item: blogpost }">
-								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/blogposts/${blogpost.id}/edit`"> Edit </a>
+							<template #cell(actions)="{ item: contact }">
+								<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" :href="`/admin/contacts/${contact.id}/edit`"> Edit </a>
 							</template>
 						</Table>
 				</div>

@@ -3,10 +3,10 @@
 </script>
 
 <template>
-	<AppLayout title="Blog Post Management">
+	<AppLayout title="Contacts Management">
 		<template #header>
 			<h2 class="font-semibold text-xl text-gray-800 leading-tight">
-				Blog Post Management
+				Contacts Management
 			</h2>
 		</template>
 
@@ -16,24 +16,19 @@
 					class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5"
 				>
 					<div>
-						<Head :title="`${form.title}`" />
+						<Head :title="`${form.name}`" />
 						<div class="flex justify-start mb-8 max-w-3xl">
 							<h1 class="text-3xl font-bold">
 								<Link
 									class="text-indigo-400 hover:text-indigo-600"
-									href="/admin/blogposts"
-									>Blog Post</Link
+									href="/admin/contacts"
+									>Contacts</Link
 								>
 								<span class="text-indigo-400 font-medium"
 									>/</span
 								>
-								{{ form.title }}
+								{{ form.name }}
 							</h1>
-							<img
-								v-if="blogpost.banner"
-								class="block ml-4 w-8 h-8 rounded-full"
-								:src="blogpost.banner"
-							/>
 						</div>
 						<div
 							class="max-w-3xl bg-white rounded-md shadow overflow-hidden"
@@ -42,74 +37,52 @@
 								<div class="flex flex-wrap -mb-8 -mr-6 p-8">
                                     
 									<text-input
-										v-model="form.title"
-										:error="form.errors.title"
+										v-model="form.name"
+										:error="form.errors.name"
 										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Title"
+                                        disabled
+										label="Name"
 									/>
 									<text-input
-										v-model="form.author"
-										:error="form.errors.author"
+										v-model="form.email"
+										:error="form.errors.email"
 										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Author"
+                                        disabled
+										label="Email"
+									/>
+									<text-input
+										v-model="form.contact"
+										:error="form.errors.contact"
+										class="pb-8 pr-6 w-full lg:w-1/2"
+                                        disabled
+										label="Contact"
 									/>
 									<textarea-input
 										v-model="form.description"
 										:error="form.errors.description"
 										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Description"
+                                        disabled
+										label="description"
 									/>
-									<textarea-input
-										v-model="form.content"
-										:error="form.errors.content"
-										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Content"
-									/>
-                                    <text-input
-										v-model="form.tags"
-										:error="form.errors.tags"
-										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Tags"
-									/>
-                                    <select-input
-										v-model="form.is_active"
-										:error="form.errors.is_active"
-										class="pb-8 pr-6 w-full lg:w-1/2"
-										label="Is Visible"
-									>
-										<option :value="null" />
-										<option value="0">NO</option>
-										<option value="1">YES</option>
-									</select-input>
-
-                                    <file-input
-										v-model="form.banner"
-										:error="form.errors.banner"
-										class="pb-8 pr-6 w-full lg:w-1/2"
-										type="file"
-										accept="image/*"
-										label="Blog Post Banner Image"
-									/>
-								
                                 </div>
 								<div
 									class="flex items-center px-8 py-4 bg-gray-50 border-t border-gray-100"
 								>
 									<button
-										v-if="!blogpost.deleted_at"
+										v-if="!contact.deleted_at"
 										class="text-red-600 hover:underline"
 										tabindex="-1"
 										type="button"
 										@click="destroy"
 									>
-										Delete Blog Post
+										Delete contact
 									</button>
-									<loading-button
+									<!-- <loading-button
 										:loading="form.processing"
 										class="btn-indigo ml-auto"
 										type="submit"
-										>Update Blog Post</loading-button
-									>
+										>Update Contact</loading-button
+									> -->
 								</div>
 							</form>
 						</div>
@@ -141,37 +114,33 @@ export default {
 		TrashedMessage,
 	},
 	props: {
-		blogpost: Object,
+		contact: Object,
 	},
 	remember: "form",
 	data() {
 		return {
 			form: this.$inertia.form({
 				_method: "put",
-				title: this.blogpost.title,
-				author: this.blogpost.author,
-				description: this.blogpost.description,
-				content: this.blogpost.content,
-				tags: this.blogpost.tags,
-				is_active: this.blogpost.is_active,
-				banner: null,
+				name: this.contact.name,
+				contact: this.contact.contact,
+				email: this.contact.email,
+				description: this.contact.description,
 			}),
 		};
 	},
 	methods: {
 		update() {
-			this.form.post(`/admin/blogposts/${this.blogpost.id}`, {
-				onSuccess: () => this.form.reset("banner"),
+			this.form.post(`/admin/contacts/${this.contact.id}`, {
 			});
 		},
 		destroy() {
-			if (confirm("Are you sure you want to delete this blog post ?")) {
-				this.$inertia.delete(`/admin/blogposts/${this.blogpost.id}`);
+			if (confirm("Are you sure you want to delete this client contact ?")) {
+				this.$inertia.delete(`/admin/contacts/${this.contact.id}`);
 			}
 		},
 		restore() {
-			if (confirm("Are you sure you want to restore this blog post?")) {
-				this.$inertia.put(`/admin/blogposts/${this.blogpost.id}/restore`);
+			if (confirm("Are you sure you want to restore this contact ?")) {
+				this.$inertia.put(`/admin/contacts/${this.contact.id}/restore`);
 			}
 		},
 	},

@@ -40,10 +40,10 @@ class AdvertController extends Controller
                 ->name('adverts')
                 ->pageName('advertsPage')
                 ->defaultSort('title')
-                ->column(key: 'title', searchable: true)
-                ->column(key: 'active', searchable: true)
-                ->column(key: 'url', searchable: true)
-                ->column(key: 'created_at', searchable: true)
+                ->column(key: 'title', searchable: true, sortable: true)
+                ->column(key: 'active', searchable: true, sortable: true)
+                ->column(key: 'url', searchable: true, sortable: true)
+                ->column(key: 'created_at', searchable: true, sortable: true)
                 ->column(label: 'Actions');
         });
     }

@@ -67,6 +67,11 @@ Route::get('/about', function () {
     return Inertia::render('About', []);
 })->name("web.about");
 
+Route::get('/profile', function () {
+    return Inertia::render('Profile', [
+    ]);
+})->name("web.profile");
+
 /**
  *  !Website Routes
  */
@@ -76,7 +81,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    
+
     Route::get('/admin/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
@@ -86,6 +91,11 @@ Route::middleware([
      */
 
     // users 
+	Route::get('/admin', function () {
+        return Inertia::render('Dashboard');
+    })->name('admin');
+
+    // users
     Route::resource('/admin/users', UserController::class);
     Route::get('/admin/users', [UserController::class, 'index'])->name('users');
 
@@ -97,7 +107,7 @@ Route::middleware([
     Route::resource('/admin/products', ProductController::class);
     Route::get('/admin/products', [ProductController::class, 'index'])->name('products');
 
-    // Discount 
+    // Discount
     Route::resource('/admin/discounts', DiscountController::class);
     Route::get('/admin/discounts', [DiscountController::class, 'index'])->name('discounts');
 

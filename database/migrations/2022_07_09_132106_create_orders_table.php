@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->decimal('total_discount', 20, 2)->default(0);
-            $table->decimal('promo_code')->nullable();
+            $table->string('promo_code')->nullable();
 			$table->unsignedBigInteger('sponsored_by')->nullable();
 			$table->foreign('sponsored_by')->references('id')->on('users');
             $table->decimal('total_price', 20, 2);

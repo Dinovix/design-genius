@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('last_name');
+            $table->string('last_name')->nullable();
             $table->string('email')->unique();
 			$table->string("gender")->nullable();
             $table->timestamp('email_verified_at')->nullable();
@@ -25,11 +25,12 @@ return new class extends Migration
 			$table->string('town')->nullable();
 			$table->string('phone')->nullable();
 			$table->boolean('is_admin')->default(false);
-            $table->rememberToken();
+            $table->boolean('is_premium')->default(false);
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
 			$table->string('affiliation_code')->nullable();
             $table->ipAddress('ip_address')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -39,6 +39,7 @@ const submit = () => {
                 <JetLabel for="first_name" value="First Name" />
                 <JetInput
                     id="first_name"
+                    name="first_name"
                     v-model="form.first_name"
                     type="text"
                     class="mt-1 block w-full"
@@ -51,6 +52,7 @@ const submit = () => {
                 <JetLabel for="last_name" value="Last Name" />
                 <JetInput
                     id="last_name"
+                    name="last_name"
                     v-model="form.last_name"
                     type="text"
                     class="mt-1 block w-full"

@@ -20,11 +20,11 @@
 						<div class="flex justify-start mb-8 max-w-3xl">
 							<h1 class="text-3xl font-bold">
 								<Link
-									class="text-indigo-400 hover:text-indigo-600"
+									class="text-slate-400 hover:text-slate-600"
 									href="/admin/orders"
 									>Orders</Link
 								>
-								<span class="text-indigo-400 font-medium"
+								<span class="text-slate-400 font-medium"
 									>/</span
 								>
 								{{ form.full_name }}
@@ -101,7 +101,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr v-for="product in products" class="bg-white border-b ">
+                                                <tr v-for="product in products" v-bind:key="product.id+'-prod'" class="bg-white border-b ">
                                                     <th scope="row" class="py-4 px-6 font-medium">
                                                         {{ product.name }}
                                                     </th>
@@ -131,7 +131,7 @@
                                         disabled
 									/>
                                     <text-input
-										v-model="form.email"                                        
+										v-model="form.email"
 										:error="form.errors.email"
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Client Email"
@@ -161,7 +161,7 @@
 										class="pb-8 pr-6 w-full lg:w-1/2"
 										label="Delivery Address"
 									/>
-									
+
                                 </div>
 								<div
 									class="flex items-center px-8 py-4 bg-gray-50 border-t border-gray-100"
@@ -177,7 +177,7 @@
 									</button>
 									<loading-button
 										:loading="form.processing"
-										class="btn-indigo ml-auto"
+										class="btn-slate ml-auto"
 										type="submit"
 										>Update Order</loading-button
 									>
@@ -239,7 +239,7 @@ export default {
 	methods: {
 		update() {
 			this.form.post(`/admin/orders/${this.order.id}`, {
-				// 
+				//
 			});
 		},
 		destroy() {

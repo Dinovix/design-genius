@@ -22,6 +22,6 @@ class ImageController extends Controller
     }
 
     public function delete($path){
-        
+
     }
 }

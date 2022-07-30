@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('banner')->nullable();
             $table->string('content');
 			$table->string('tags')->nullable();//comma seperated list
+            $table->boolean('is_active')->default(true);
 			$table->integer('likes')->default(0);
             $table->timestamps();
         });

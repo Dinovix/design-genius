@@ -139,6 +139,10 @@ const logout = () => {
                                             Profile
                                         </JetDropdownLink>
 
+									   <JetDropdownLink v-if="$page.props.user.is_admin" :href="route('dashboard')">
+                                            Admin Panel
+                                        </JetDropdownLink>
+
 
                                         <div class="border-t border-gray-100" />
 

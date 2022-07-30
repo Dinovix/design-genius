@@ -15,7 +15,7 @@ const showingNavigationDropdown = ref(true);
 
 <template>
 	<div
-		class="h-full hidden md:block  fixed p-3 space-y-2 overflow-y-scroll md:w-1/5 bg-coolGray-50 text-coolGray-800  md:float-start">
+		class="h-full hidden md:block  fixed p-3 pr-1 space-y-2 overflow-y-scroll md:w-1/5 bg-coolGray-50 text-coolGray-800  md:float-start">
 		<div class="flex items-center p-2 space-x-4">
 			<div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-1">
 				<img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url"

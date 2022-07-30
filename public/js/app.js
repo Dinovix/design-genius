@@ -33789,10 +33789,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "h-full hidden md:block fixed p-3 pr-1 space-y-2 overflow-y-scroll md:w-1/5 bg-coolGray-50 text-coolGray-800 md:float-start"
+  "class": "h-full hidden md:block fixed p-3 pr-0 space-y-2 md:w-1/5 bg-coolGray-50 text-coolGray-800 md:float-start"
 };
 var _hoisted_2 = {
-  "class": "flex items-center p-2 space-x-4"
+  "class": "flex items-center p-2 pr-0 space-x-4"
 };
 var _hoisted_3 = {
   key: 0,
@@ -33816,7 +33816,7 @@ var _hoisted_8 = {
   "class": "divide-y divide-coolGray-300"
 };
 var _hoisted_9 = {
-  "class": "pt-2 pb-4 space-y-1 text-sm"
+  "class": "pt-2 pb-4 space-y-1 text-sm overflow-y-scroll scroll-m-0 scroll-p-0"
 };
 var _hoisted_10 = {
   "class": "bg-coolGray-100 text-coolGray-900"
@@ -33851,7 +33851,9 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Users ");
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Users", -1
+/* HOISTED */
+);
 
 var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   xmlns: "http://www.w3.org/2000/svg",

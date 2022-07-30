@@ -15,8 +15,8 @@ const showingNavigationDropdown = ref(true);
 
 <template>
 	<div
-		class="h-full hidden md:block  fixed p-3 pr-1 space-y-2 overflow-y-scroll md:w-1/5 bg-coolGray-50 text-coolGray-800  md:float-start">
-		<div class="flex items-center p-2 space-x-4">
+		class="h-full hidden md:block  fixed p-3 pr-0 space-y-2  md:w-1/5 bg-coolGray-50 text-coolGray-800  md:float-start">
+		<div class="flex items-center p-2 pr-0 space-x-4">
 			<div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-1">
 				<img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url"
 					:alt="$page.props.user.name">
@@ -33,7 +33,7 @@ const showingNavigationDropdown = ref(true);
 			</div>
 		</div>
 		<div class="divide-y divide-coolGray-300">
-			<ul class="pt-2 pb-4 space-y-1 text-sm">
+			<ul class="pt-2 pb-4 space-y-1 text-sm overflow-y-scroll scroll-m-0 scroll-p-0 ">
 				<li class="bg-coolGray-100 text-coolGray-900">
 					<Link :href="route('dashboard')" :active="route().current('dashboard')"
 						class="flex items-center p-2 space-x-3 rounded-md">
@@ -57,7 +57,7 @@ const showingNavigationDropdown = ref(true);
 						<path stroke-linecap="round" stroke-linejoin="round"
 							d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
 					</svg>
-					Users
+					<span>Users</span>
 
 					</Link>
 				</li>

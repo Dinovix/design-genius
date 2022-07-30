@@ -1092,6 +1092,18 @@ select {
 .top-full {
   top: 100%;
 }
+.top-\[20vh\] {
+  top: 20vh;
+}
+.top-\[25vh\] {
+  top: 25vh;
+}
+.top-\[15vh\] {
+  top: 15vh;
+}
+.top-\[22vh\] {
+  top: 22vh;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1421,6 +1433,15 @@ select {
 }
 .h-0 {
   height: 0px;
+}
+.h-\[80vh\] {
+  height: 80vh;
+}
+.h-\[60vh\] {
+  height: 60vh;
+}
+.h-\[70vh\] {
+  height: 70vh;
 }
 .max-h-max {
   max-height: -webkit-max-content;
@@ -3911,6 +3932,14 @@ nav.scrolled span:hover {
     width: 75%;
   }
 
+  .md\:w-\[15\%\] {
+    width: 15%;
+  }
+
+  .md\:w-\[20\%\] {
+    width: 20%;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -4092,6 +4121,14 @@ nav.scrolled span:hover {
 }
 @media (min-width: 1024px) {
 
+  .lg\:top-\[20vh\] {
+    top: 20vh;
+  }
+
+  .lg\:top-\[25vh\] {
+    top: 25vh;
+  }
+
   .lg\:order-none {
     order: 0;
   }
@@ -4168,6 +4205,10 @@ nav.scrolled span:hover {
 
   .lg\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .lg\:w-\[15\%\] {
+    width: 15%;
   }
 
   .lg\:grid-cols-2 {

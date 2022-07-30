@@ -1430,6 +1430,9 @@ select {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-full {
+  min-height: 100%;
+}
 .w-full {
   width: 100%;
 }
@@ -2422,6 +2425,9 @@ select {
 }
 .pr-0 {
   padding-right: 0px;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .text-left {
   text-align: left;

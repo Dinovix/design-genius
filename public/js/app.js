@@ -33792,7 +33792,7 @@ var _hoisted_1 = {
   "class": "h-full hidden md:block fixed p-3 pr-0 space-y-2 md:w-1/5 bg-coolGray-50 text-coolGray-800 md:float-start"
 };
 var _hoisted_2 = {
-  "class": "flex items-center p-2 pr-0 space-x-4"
+  "class": "flex items-center pl-2 pr-0 space-x-4"
 };
 var _hoisted_3 = {
   key: 0,
@@ -33813,10 +33813,10 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_8 = {
-  "class": "divide-y divide-coolGray-300"
+  "class": "divide-y divide-coolGray-300 overflow-y-scroll min-h-full h-full"
 };
 var _hoisted_9 = {
-  "class": "pt-2 pb-4 space-y-1 text-sm overflow-y-scroll scroll-m-0 scroll-p-0"
+  "class": "pt-2 pb-4 space-y-1 text-sm"
 };
 var _hoisted_10 = {
   "class": "bg-coolGray-100 text-coolGray-900"

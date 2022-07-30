@@ -16,7 +16,7 @@ const showingNavigationDropdown = ref(true);
 <template>
 	<div
 		class="h-full hidden md:block  fixed p-3 pr-0 space-y-2  md:w-1/5 bg-coolGray-50 text-coolGray-800  md:float-start">
-		<div class="flex items-center p-2 pr-0 space-x-4">
+		<div class="flex items-center pl-2 pr-0 space-x-4">
 			<div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-1">
 				<img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url"
 					:alt="$page.props.user.name">
@@ -32,8 +32,8 @@ const showingNavigationDropdown = ref(true);
 				</span>
 			</div>
 		</div>
-		<div class="divide-y divide-coolGray-300">
-			<ul class="pt-2 pb-4 space-y-1 text-sm overflow-y-scroll scroll-m-0 scroll-p-0 ">
+		<div class="divide-y divide-coolGray-300 overflow-y-scroll min-h-full h-full">
+			<ul class="pt-2 pb-4 space-y-1 text-sm  ">
 				<li class="bg-coolGray-100 text-coolGray-900">
 					<Link :href="route('dashboard')" :active="route().current('dashboard')"
 						class="flex items-center p-2 space-x-3 rounded-md">

@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Controllers\Helpers\Helper;
+
 class ProductController extends Controller
 {
     /**
@@ -97,7 +99,7 @@ class ProductController extends Controller
             "thumbnail" => ['required', 'image'],
         ]);
 
-        Product::create([
+        $product = Product::create([
             'name' => Request::get('name'),
             'category_id' => Request::get('category_id'),
             'discount_id' => Request::get('discount_id'),
@@ -115,6 +117,11 @@ class ProductController extends Controller
             'active' => Request::get('active'),
             'thumbnail' => Request::file('thumbnail') ? Request::file('thumbnail')->store('products') : null,
         ]);
+
+        if ($product)
+            Helper::log('PRODUCT CREATED', "User added product " . $product->name);
+        else 
+            Helper::log('PRODUCT CREATION ERROR', "Error while creating product " . Request::get('name'));
 
         return Redirect::route('products')->with('success', 'Product created.');
     }
@@ -194,18 +201,21 @@ class ProductController extends Controller
             "thumbnail" => ['image'],
         ]);
 
-        $product->update(Request::only('name', 'category_id', 'discount_id', 'sale_price', 'is_rentable', 'rent_price', 'weight', 'available_colors', 'cart_description', 'short_description', 'long_description', 'features', 'quantity', 'location', 'active'));
+        $result = $product->update(Request::only('name', 'category_id', 'discount_id', 'sale_price', 'is_rentable', 'rent_price', 'weight', 'available_colors', 'cart_description', 'short_description', 'long_description', 'features', 'quantity', 'location', 'active'));
 
         if (Request::file('thumbnail')) {
             $old_image_path = $product->thumbnail; 
             try {
-                $res = Storage::delete($old_image_path);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($old_image_path);
+                $product->update(['thumbnail' => Request::file('thumbnail')->store('products')]);
+            } catch (\Exception $e) {
+                Helper::log('PRODUCT UPDATE ERROR', $e->getMessage(), false);
+
             } 
-            $product->update(['thumbnail' => Request::file('thumbnail')->store('products')]);
         }
+
+        if ($result) 
+            Helper::log('PRODUCT UPDATED', "User updated product " . $product->name);
 
         return Redirect::back()->with('success', 'Product updated.');
     }
@@ -218,17 +228,17 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        if (Auth::user()->is_admin) {
-            return Redirect::back()->with('error', 'Deleting is not allowed.');
+        if ($product->thumbnail) {
+            try {
+                Storage::delete($product->thumbnail);
+            } catch (\Exception $e) {
+                Helper::log('PRODUCT DELETE ERROR', $e->getMessage(), false);
+            } 
         }
+        $result = $product->delete();
 
-        try {
-            $res = Storage::delete($product->thumbnail);
-        } catch (\Throwable $th) {
-            //throw $th;
-            // TODO : Logs errors
-        } 
-        $product->delete();
+        if ($result)
+            Helper::log('PRODUCT DELETED', "User deleted product " . $product->name);
 
         return Redirect::route('products')->with('success', 'Product deleted.');
     }

@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
+
+use App\Http\Controllers\Helpers\Helper;
 class ContactController extends Controller
 {
     /**
@@ -113,7 +115,10 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        $contact->delete();
+        $result = $contact->delete();
+
+        if ($result)
+            Helper::log('CONTACT US DELETED', "User deleted contact request of " . $contact->name);
 
         return Redirect::route('contacts')->with('success', 'Contact deleted.');
     }

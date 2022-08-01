@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 
+use App\Http\Controllers\Helpers\Helper;
 
 class CategoryController extends Controller
 {
@@ -69,10 +70,15 @@ class CategoryController extends Controller
             'description' => ['required'],
         ]);
 
-        Category::create([
+        $category = Category::create([
             'name' => Request::get('name'),
             'description' => Request::get('description'),
         ]);
+
+        if ($category)
+            Helper::log('PRODUCT CATEGORY CREATED', "User added product category " . $category->name);
+        else 
+            Helper::log('PRODUCT CATEGORY CREATION ERROR', "Error while creating product category " . Request::get('name'));
 
         return Redirect::route('categories')->with('success', 'Product Category created.');
     }
@@ -120,7 +126,10 @@ class CategoryController extends Controller
             'description' => ['required'],
         ]);
 
-        $category->update(Request::only('name', 'description'));
+        $result = $category->update(Request::only('name', 'description'));
+
+        if ($result) 
+            Helper::log('PRODUCT CATEGORY UPDATED', "User updated product category " . $category->name);
 
         return Redirect::back()->with('success', 'Product Category updated.');
     }
@@ -133,11 +142,10 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        if (Auth::user()->is_admin) {
-            return Redirect::back()->with('error', 'Deleting is not allowed.');
-        }
+        $result = $category->delete();
 
-        $category->delete();
+        if ($result)
+            Helper::log('PRODUCT CATEGORY DELETED', "User deleted product category " . $category->name);
 
         return Redirect::route('categories')->with('success', 'Category deleted.');
     }

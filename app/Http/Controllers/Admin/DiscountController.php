@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Controllers\Helpers\Helper;
+
 class DiscountController extends Controller
 {
     /**
@@ -76,7 +78,7 @@ class DiscountController extends Controller
             'exp_date' => ['required', 'date', 'after:now'],
         ]);
 
-        Discount::create([
+        $discount = Discount::create([
             'name' => Request::get('name'),
             'description' => Request::get('description'),
             'percentage' => Request::get('percentage'),
@@ -84,6 +86,12 @@ class DiscountController extends Controller
             'active' => Request::get('active'),
             'exp_date' => Request::get('exp_date'),
         ]);
+
+        if ($discount)
+            Helper::log('DISCOUNT CREATED', "User added discount " . $discount->name);
+        else 
+            Helper::log('DISCOUNT CREATION ERROR', "Error while creating discount " . Request::get('name'));
+       
 
         return Redirect::route('discounts')->with('success', 'Discount created.');
     }
@@ -139,7 +147,10 @@ class DiscountController extends Controller
             'exp_date' => ['required', 'date', 'after:now'],
         ]);
 
-        $discount->update(Request::only('name', 'description', 'percentage', 'is_for_rent', 'active', 'exp_date'));
+        $result = $discount->update(Request::only('name', 'description', 'percentage', 'is_for_rent', 'active', 'exp_date'));
+
+        if ($result) 
+            Helper::log('DISCOUNT UPDATED', "User updated discount " . $discount->name);
 
         return Redirect::back()->with('success', 'Discount updated.');
     }
@@ -152,7 +163,10 @@ class DiscountController extends Controller
      */
     public function destroy(Discount $discount)
     {
-        $discount->delete();
+        $result = $discount->delete();
+
+        if ($result) 
+            Helper::log('DISCOUNT DELETED', "User deleted discount " . $discount->name);
 
         return Redirect::route('discounts')->with('success', 'Discount deleted.');
     }

@@ -27,7 +27,9 @@ class LogController extends Controller
     {
         InertiaTable::updateQueryBuilderParameters('contacts');
 
-        $logs = QueryBuilder::for(Log::class)
+        $query = Log::where('is_visible', true); 
+
+        $logs = QueryBuilder::for($query)
             ->defaultSort('created_at')
             ->allowedIncludes(['user'])
             ->select('logs.id', 'logs.title',

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Controllers\Helpers\Helper;
+
 class AdvertController extends Controller
 {
     /**
@@ -74,14 +76,19 @@ class AdvertController extends Controller
             'image' => ['nullable', 'image'],
         ]);
 
-        Advert::create([
+        $advert = Advert::create([
             'title' => Request::get('title'),
             'description' => Request::get('description'),
             'url' => Request::get('url'),
             'active' => Request::get('active'),
             'image' => Request::file('image') ? Request::file('image')->store('adverts') : null,
         ]);
-
+        
+        if ($advert)
+            Helper::log('ADVERT CREATED', "User added advert " . $advert->title);
+        else 
+            Helper::log('ADVERT CREATION ERROR', "Error while creating advert " . Request::get('title'));
+       
         return Redirect::route('adverts')->with('success', 'Advert created.');
     }
 
@@ -128,19 +135,21 @@ class AdvertController extends Controller
             'image' => ['nullable', 'image'],
         ]);
 
-        $advert->update(Request::only('title', 'description', 'url', 'active'));
+        $result = $advert->update(Request::only('title', 'description', 'url', 'active'));
 
         if (Request::file('image')) {
             $old_image_path = $advert->image; 
             try {
-                $res = Storage::delete($old_image_path);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($old_image_path);
+                $advert->update(['image' => Request::file('image')->store('adverts')]);
+            } catch (\Exception $e) {
+                Helper::log('ADVERT UPDATE ERROR', $e->getMessage(), false);
             } 
-            $advert->update(['image' => Request::file('image')->store('adverts')]);
         }
 
+        if ($result) 
+            Helper::log('ADVERT UPDATED', "User updated advert " . $advert->title);
+        
         return Redirect::back()->with('success', 'Advert updated.');
     }
 
@@ -154,13 +163,15 @@ class AdvertController extends Controller
     {
         if( $advert->image ){
             try {
-                $res = Storage::delete($advert->image);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($advert->image);
+            } catch (\Exception $e) {
+                Helper::log('ADVERT DELETE ERROR', $e->getMessage(), false);
             } 
         }
-        $advert->delete();
+        $result = $advert->delete();
+
+        if ($result)
+            Helper::log('ADVERT DELETED', "User deleted advert " . $advert->title);
 
         return Redirect::route('adverts')->with('success', 'Advert deleted.');
     }

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\File;
 
+use App\Http\Controllers\Helpers\Helper;
 class UserController extends Controller
 {
     /**
@@ -80,7 +81,7 @@ class UserController extends Controller
             'photo' => ['nullable', 'image'],
         ]);
 
-        User::create([
+        $user = User::create([
             'first_name' => Request::get('first_name'),
             'last_name' => Request::get('last_name'),
             'email' => Request::get('email'),
@@ -93,6 +94,11 @@ class UserController extends Controller
             'email_verified_at' => date('Y-m-d H:i:s'),
             'profile_photo_path' => Request::file('photo') ? Request::file('photo')->store('users') : null,
         ]);
+
+        if ($user)
+            Helper::log('USER CREATED', "User added user account " . $user->email);
+        else 
+            Helper::log('USER CREATION ERROR', "Error while creating user account " . Request::get('email'));
 
         return Redirect::route('users')->with('success', 'User created.');
     }
@@ -155,22 +161,24 @@ class UserController extends Controller
             'photo' => ['nullable', 'image'],
         ]);
 
-        $user->update(Request::only('first_name', 'last_name', 'email', 'is_admin', 'gender', 'country', 'town', 'phone'));
+        $result = $user->update(Request::only('first_name', 'last_name', 'email', 'is_admin', 'gender', 'country', 'town', 'phone'));
 
         if (Request::file('photo')) {
             $old_image_path = $user->profile_photo_path; 
             try {
-                $res = Storage::delete($old_image_path);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($old_image_path);
+                $result = $user->update(['profile_photo_path' => Request::file('photo')->store('users')]);
+            } catch (\Exception $e) {
+                Helper::log('USER UPDATE ERROR', $e->getMessage(), false);
             } 
-            $user->update(['profile_photo_path' => Request::file('photo')->store('users')]);
         }
 
         if (Request::get('password')) {
-            $user->update(['password' => Request::get('password')]);
+            $result = $user->update(['password' => Request::get('password')]);
         }
+
+        if ($result) 
+            Helper::log('USER UPDATED', "User updated user account " . $user->email);
 
         return Redirect::back()->with('success', 'User updated.');
     
@@ -184,17 +192,15 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        if (Auth::user()->is_admin) {
-            return Redirect::back()->with('error', 'Deleting is not allowed.');
-        }
-
         try {
-            $res = Storage::delete($user->profile_photo_path);
-        } catch (\Throwable $th) {
-            //throw $th;
-            // TODO : Logs errors
+            Storage::delete($user->profile_photo_path);
+        } catch (\Exception $e) {
+            Helper::log('USER DELETE ERROR', $e->getMessage(), false);
         } 
-        $user->delete();
+        $result = $user->delete();
+
+        if ($result)
+            Helper::log('USER DELETED', "User deleted user account " . $user->email);
 
         return Redirect::route('users')->with('success', 'User deleted.');
     }

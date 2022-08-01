@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Controllers\Helpers\Helper;
+
 class OrderController extends Controller
 {
     /**
@@ -151,7 +153,10 @@ class OrderController extends Controller
             "shipped" => ['required'],
         ]);
 
-        $order->update(Request::only('phone', 'po_box', 'city', 'delivery_address', 'paid', 'shipped'));
+        $result = $order->update(Request::only('phone', 'po_box', 'city', 'delivery_address', 'paid', 'shipped'));
+
+        if ($result) 
+            Helper::log('ORDER UPDATED', "User updated order " . $order->id);
 
         return Redirect::back()->with('success', 'Order updated.');
     }
@@ -164,7 +169,10 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        $order->delete();
+        $result = $order->delete();
+
+        if ($result)
+            Helper::log('ORDER DELETED', "User deleted order " . $order->id);
 
         return Redirect::route('orders')->with('success', 'Order deleted.');
     }

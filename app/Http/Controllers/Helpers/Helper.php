@@ -16,14 +16,15 @@ class Helper extends Controller
      * @param string $description
      * @return void
      */
-    public static function log($title, $description){
+    public static function log($title, $description, $is_visible=true){
         if (Auth::check()){
             $user = Auth::user(); 
             $full_name = $user->first_name . ' ' . $user->last_name ;
             Log::create([
                 'user_id' => $user->id,
                 'title' => $title,
-                'description' =>  $full_name . ' : ' . $description
+                'description' =>  $full_name . ' : ' . $description,
+                'is_visible' => $is_visible
             ]);
         }
     }

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Controllers\Helpers\Helper;
+
 class BlogController extends Controller
 {
     /**
@@ -77,7 +79,7 @@ class BlogController extends Controller
             'banner' => ['nullable', 'image'],
         ]);
 
-        BlogPost::create([
+        $blogPost = BlogPost::create([
             'user_id' => Auth::user()->id,
             'title' => Request::get('title'),
             'author' => Request::get('author'),
@@ -87,6 +89,11 @@ class BlogController extends Controller
             'is_active' => Request::get('is_active'),
             'banner' => Request::file('banner') ? Request::file('banner')->store('blogposts') : null,
         ]);
+
+        if ($blogPost)
+            Helper::log('BLOG POST CREATED', "User added blog post " . $blogPost->title);
+        else 
+            Helper::log('BLOG POST CREATION ERROR', "Error while creating blog post " . Request::get('title'));
 
         return Redirect::route('blogposts')->with('success', 'Blog Post created.');
     }
@@ -138,18 +145,20 @@ class BlogController extends Controller
             'banner' => ['nullable', 'image'],
         ]);
 
-        $blogPost->update(Request::only('title', 'author', 'description', 'tags', 'content', 'is_active'));
+        $result = $blogPost->update(Request::only('title', 'author', 'description', 'tags', 'content', 'is_active'));
 
         if (Request::file('banner')) {
             $old_image_path = $blogPost->banner; 
             try {
-                $res = Storage::delete($old_image_path);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($old_image_path);
+                $blogPost->update(['banner' => Request::file('banner')->store('blogposts')]);
+            } catch (\Exception $e) {
+                Helper::log('BLOG POST UPDATE ERROR', $e->getMessage(), false);
             } 
-            $blogPost->update(['banner' => Request::file('banner')->store('blogposts')]);
         }
+
+        if ($result) 
+            Helper::log('BLOG POST UPDATED', "User updated blog post " . $blogPost->title);
 
         return Redirect::back()->with('success', 'Blog Post updated.');
     }
@@ -165,13 +174,15 @@ class BlogController extends Controller
         $blogPost = BlogPost::findOrFail($id);
         if( $blogPost->banner ){
             try {
-                $res = Storage::delete($blogPost->banner);
-            } catch (\Throwable $th) {
-                //throw $th;
-                // TODO : Logs errors
+                Storage::delete($blogPost->banner);
+            } catch (\Exception $e) {
+                Helper::log('BLOG POST DELETE ERROR', $e->getMessage(), false);
             } 
         }
-        $blogPost->delete();
+        $result = $blogPost->delete();
+
+        if ($result)
+            Helper::log('BLOG POST DELETED', "User deleted blog post " . $blogPost->title);
 
         return Redirect::route('blogposts')->with('success', 'Blog Posts deleted.');
     }

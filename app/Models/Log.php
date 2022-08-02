@@ -9,6 +9,16 @@ class Log extends Model
 {
     use HasFactory;
 
+	protected $fillable = [
+		'user_id',
+		'action',
+		'description',
+		'ip',
+		'user_agent',
+	];
+
+
+
 	public function user()
 	{
 		return $this->belongsTo(User::class);

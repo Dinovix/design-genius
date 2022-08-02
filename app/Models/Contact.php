@@ -11,8 +11,36 @@ class Contact extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'created_at' => 'datetime:Y-m-d H:i:s'
-    ];
-    
+	protected $casts = [
+		'created_at' => 'datetime:Y-m-d H:i:s'
+	];
+
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
+
+	public function getRouteKeyName()
+	{
+		return 'id';
+	}
+
+	public function getRouteKey()
+	{
+		return $this->id;
+	}
+
+	public function getCreatedAtAttribute($value)
+	{
+		return date('d-m-Y H:i:s', strtotime($value));
+	}
+
+	public function getUpdatedAtAttribute($value)
+	{
+		return date('d-m-Y H:i:s', strtotime($value));
+	}
+
+
+
+
 }

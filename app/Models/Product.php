@@ -10,6 +10,23 @@ class Product extends Model
 {
     use HasFactory;
 
+	protected $fillable = [
+		'name',
+		'description',
+		'price',
+		'image',
+		'category_id',
+		'brand_id',
+		'quantity',
+		'discount',
+		'is_featured',
+		'is_new',
+		'is_active',
+		'is_deleted',
+		'created_by',
+		'updated_by',
+	];
+
 
 	public function category()
 	{
@@ -23,7 +40,7 @@ class Product extends Model
 
     protected $casts = [
         'created_at' => 'datetime:Y-m-d H:i:s'
-    ]; 
+    ];
 
     public function discount(){
         return $this->belongsTo('App\Models\Discount');

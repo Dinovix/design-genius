@@ -80,6 +80,7 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
+	'admin'
 ])->group(function () {
 
     Route::get('/admin/dashboard', function () {
@@ -87,10 +88,10 @@ Route::middleware([
     })->name('dashboard');
 
     /**
-     * Admin resources administration routes 
+     * Admin resources administration routes
      */
 
-    // users 
+    // users
 	Route::get('/admin', function () {
         return Inertia::render('Dashboard');
     })->name('admin');
@@ -118,15 +119,15 @@ Route::middleware([
     // Adverts
     Route::resource('/admin/adverts', AdvertController::class);
     Route::get('/admin/adverts', [AdvertController::class, 'index'])->name('adverts');
-    
+
     // BlogPosts
     Route::resource('/admin/blogposts', BlogController::class);
     Route::get('/admin/blogposts', [BlogController::class, 'index'])->name('blogposts');
-    
+
     // Contacts
     Route::resource('/admin/contacts', ContactController::class);
     Route::get('/admin/contacts', [ContactController::class, 'index'])->name('contacts');
-    
+
     // Admin Logs
     Route::resource('/admin/logs', LogController::class);
     Route::get('/admin/logs', [LogController::class, 'index'])->name('logs');

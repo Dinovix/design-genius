@@ -5,19 +5,20 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class ContactController extends Controller
 {
 
 	public function __construct()
 	{
-		$this->middleware('auth:api');
+		//$this->middleware('auth.api');
 	}
 
 	/**
 	 * Return a list of all of the contacts.
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
     public function index()
 	{
@@ -34,8 +35,28 @@ class ContactController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		$contact = Contact::create($request->all());
-		return response()->json($contact);
+		$contact = array();
+		$contact['name'] = $request->first_name . " " . $request->last_name;
+		$contact['email'] = $request->email;
+		$contact['contact'] = $request->contact;
+		$contact['description'] = $request->description;
+
+		try {
+
+			//$contact->save();
+			$contact = Contact::create($contact);
+			mail("kapolw@gmail.com", 'Contact Us | DesignGenius Website', $contact->description . "\n---\n\n" ."Sender: ". $contact->name . "\n" . $contact->email . "\n" . $contact->contact);
+
+			// return  ($request->error) ? redirect()->route('web.contact')->with("success", "Your message has been sent successfully !") : response()->json($contact);
+			return   redirect()->route('web.contact')->with("success", "Your message has been sent successfully !");
+
+		} catch (\Exception $e) {
+
+			return response()->json(['status' => 'error', 'message' => $e->getMessage()]);
+			// redirect()->route('web.contact')->with('error' , $e->getMessage()) : response()->json(['status' => 'error', 'message' => $e->getMessage()]);
+
+		}
+
 	}
 
 	/**
@@ -66,7 +87,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContacts()
 	{
@@ -76,7 +97,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContact($id)
 	{
@@ -86,17 +107,17 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
-	public function getContactByUser($id)
+	public function getContactByUser($user_id)
 	{
-		$contact = Contact::where('user_id', $id)->get();
+		$contact = Contact::where('user_id', $user_id)->get();
 		return response()->json($contact);
 	}
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContactByUserAndContact($id, $id2)
 	{
@@ -106,7 +127,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContactByUserAndContactAndType($id, $id2, $id3)
 	{
@@ -116,7 +137,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContactByType($type)
 	{
@@ -126,7 +147,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContactByTypeAndUser($type, $id)
 	{
@@ -136,7 +157,7 @@ class ContactController extends Controller
 
 	/**
 	 *
-	 * @return void
+	 * @return \Illuminate\Http\JsonResponse
 	 */
 	public function getContactByTypeAndUserAndContact($type, $user_id, $id)
 	{

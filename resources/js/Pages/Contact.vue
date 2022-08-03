@@ -146,7 +146,7 @@ let submit = () => {
 							type="hidden"
 							name="user_id"
 							v-model="contact.user_id"
-							v-bind="$page.props.user.id"
+							v-bind="$page.props?.user?.id"
 						/>
 						<p
 							class="leading-relaxed mb-5 text-gray-600 font-poppins"
